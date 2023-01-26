@@ -2,8 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import classes from "./App.module.css";
+import dummyData from "./data/dummyData";
 
 const Work = lazy(() => import("./page/Work"));
 const NewPost = lazy(() => import("./page/NewPost"));
@@ -12,6 +13,8 @@ const Visit = lazy(() => import("./page/Visit"));
 const Draw = lazy(() => import("./page/Draw"));
 
 function App() {
+  const [data, setData] = useState(dummyData)
+  
   return (
     <BrowserRouter>
       <div className={classes.main}>
@@ -27,7 +30,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Work />} />
                 <Route path="/newpost" element={<NewPost />} />
-                <Route path="/visit" element={<Visit />} />
+                <Route path="/visit" element={<Visit visit={data.visit}/>} />
                 <Route path="/write" element={<Write />} />
                 <Route path="/draw" element={<Draw />} />
               </Routes>

@@ -10,7 +10,14 @@ const dummyData = {
         {
             "id":1,
             "author":"moomin",
-            "title":"Hi"
+            "title":"Hi",
+            "img":'none'
+        },
+        {
+            "id":2,
+            "author":"minmoo",
+            "title":"bye",
+            "img":'none'
         }
     ]
 }

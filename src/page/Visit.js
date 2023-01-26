@@ -1,9 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Visit = () => {
+const Visit = ({visit}) => {
     return(
         <div>
-            it's Visti
+            <div>
+                <Link to="/write">
+                    <div>New visit</div>
+                </Link>
+            </div>
+            <div>
+
+            </div>
         </div>
     )
 }
