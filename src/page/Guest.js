@@ -15,8 +15,8 @@ const Guest = ({Guest}) => {
                     
                     return(
                         <div key ={idx} className={classes.content}>
-                            <div>{el.title}</div>
                             <div>{el.author}</div>
+                            <div>{el.title}</div>
                         </div>
                     )
                 })}
