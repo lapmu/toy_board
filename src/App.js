@@ -14,6 +14,11 @@ const Draw = lazy(() => import("./page/Draw"));
 
 function App() {
   const [data, setData] = useState(dummyData)
+  const [newpost, setNewPost] = useState([ {
+    "id":0,
+    "title":"post title",
+    "body":"post body"
+}])
   
   return (
     <BrowserRouter>
