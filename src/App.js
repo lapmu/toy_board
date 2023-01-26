@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { lazy, Suspense, useState } from "react";
 import classes from "./App.module.css";
 import dummyData from "./data/dummyData";
+import { v4 as uuidv4 } from 'uuid'
 
 const Work = lazy(() => import("./page/Work"));
 const NewPost = lazy(() => import("./page/NewPost"));
@@ -15,7 +16,7 @@ const Draw = lazy(() => import("./page/Draw"));
 function App() {
   const [data, setData] = useState(dummyData)
   const [newpost, setNewPost] = useState([ {
-    "id":0,
+    "id": uuidv4(),
     "title":"post title",
     "body":"post body"
 }])
