@@ -6,7 +6,7 @@ const dummyData = {
             "body":"post body"
         }
     ],
-    "visit": [
+    "guest": [
         {
             "id":1,
             "author":"moomin",
