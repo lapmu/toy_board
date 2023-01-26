@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 80vh;
+    width: 65vw;
+}
+
+.header{
+    border: 1px solid black;
+    width: 100%;
+    flex: 1 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body {
+    border: 1px solid black;
+    width: 100%;
+    flex: 8 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    border: 1px solid black;
+    width: 100%;
+    flex: 1 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    flex: 2 0 0;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.content {
+    flex: 8 0 0;
+    border: 1px solid black;
+    height: 100%;
+}
