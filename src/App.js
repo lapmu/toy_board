@@ -30,7 +30,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Work />} />
                 <Route path="/newpost" element={<NewPost />} />
-                <Route path="/guest" element={<Guest Guest={data.visit}/>} />
+                <Route path="/guest" element={<Guest Guest={data.guest}/>} />
                 <Route path="/write" element={<Write />} />
                 <Route path="/draw" element={<Draw />} />
               </Routes>
