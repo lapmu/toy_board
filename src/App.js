@@ -8,7 +8,7 @@ import classes from "./App.module.css";
 const Work = lazy(() => import("./page/Work"));
 const NewPost = lazy(() => import("./page/NewPost"));
 const Write = lazy(() => import("./page/Write"));
-const Visit = lazy(() => import("./page/Visit"));
+const Guest = lazy(() => import("./page/Guest"));
 const Draw = lazy(() => import("./page/Draw"));
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Work />} />
                 <Route path="/newpost" element={<NewPost />} />
-                <Route path="/visit" element={<Visit />} />
+                <Route path="/guest" element={<Guest />} />
                 <Route path="/write" element={<Write />} />
                 <Route path="/draw" element={<Draw />} />
               </Routes>

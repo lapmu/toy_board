@@ -1,11 +1,11 @@
 import React from "react";
 
-const Visit = () => {
+const Guest = () => {
     return(
         <div>
-            it's Visti
+            it's Guest
         </div>
     )
 }
 
-export default Visit;
+export default Guest;
