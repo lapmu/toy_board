@@ -35,9 +35,11 @@
 
 .content {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   flex-direction: column-reverse;
   border: 1px solid black;
-  height: 30%;
+  height: 40%;
   width: 20%;
   margin-left: 5%;
 }
