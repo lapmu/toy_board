@@ -28,6 +28,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
   height: 90%;
   padding: 4% 4% 4% 0;
 }
@@ -38,5 +39,5 @@
   border: 1px solid black;
   height: 30%;
   width: 20%;
-  margin-left: 4%;
+  margin-left: 5%;
 }
