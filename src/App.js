@@ -34,7 +34,7 @@ function App() {
           <div className={classes.content}>
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
-                <Route path="/" element={<Work />} />
+                <Route path="/" element={<Work data={data.post} />} />
                 <Route path="/newpost" element={<NewPost />} />
                 <Route path="/guest" element={<Guest Guest={data.guest}/>} />
                 <Route path="/write" element={<Write />} />
