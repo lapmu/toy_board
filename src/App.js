@@ -15,6 +15,7 @@ const Draw = lazy(() => import("./page/Draw"));
 
 function App() {
   const [data, setData] = useState(dummyData)
+  console.log(data.guest)
   const [newpost, setNewPost] = useState([ {
     "id": uuidv4(),
     "title":"post title",
@@ -39,9 +40,7 @@ function App() {
       }
       const newData = {...data}
       newData.guest = [write, ...newData.guest]
-      console.log(newData.guest)
       setData(newData)
-      // console.log(write)
     }
   }
   
