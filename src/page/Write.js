@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import classes from "./Write.module.css";
 
 // 방명록 글쓰기
@@ -22,7 +23,9 @@ const Write = () => {
     <div className={classes.main}>
       <form className={classes.form} onSubmit={onSubmit}>
         <div className={classes.backsubmit}>
-          <div>{'<'}</div>
+          <Link to="/guest">
+            <p className={classes.p}>{"<"}</p>
+          </Link>
           <button className={classes.button} type="submit">
             Submit
           </button>
