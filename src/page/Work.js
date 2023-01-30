@@ -6,10 +6,10 @@ const Work = ({ data }) => {
 
     return(
         <div>
-            <Write />
             {data.map(datas => (
                 <List datas={datas} key={datas.id} />
-            ))}
+                ))}
+                {/* <Write /> */}
         </div>
     )
 }
