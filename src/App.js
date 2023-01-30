@@ -20,6 +20,12 @@ function App() {
     "title":"post title",
     "body":"post body"
 }])
+  const [newWrite, setNewWrite] = useState([{
+      "id": uuidv4(),
+      "author":"moomin",
+      "text":"Hi",
+      "img":"none",
+  }])
   
   return (
     <BrowserRouter>
