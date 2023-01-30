@@ -18,7 +18,7 @@ const Guest = ({ Guest }) => {
           return (
             <div key={idx} className={classes.content}>
               <div className={classes.content_author}>{el.author}</div>
-              <div className={classes.content_title}>{el.title}</div>
+              <div className={classes.content_text}>{el.text}</div>
             </div>
           );
         })}
