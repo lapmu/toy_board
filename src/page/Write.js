@@ -30,9 +30,10 @@ const Write = () => {
             Submit
           </button>
         </div>
+        <input className={classes.input} placeholder="Name"></input>
         <textarea
           className={classes.textarea}
-          placeholder="Text"
+          placeholder="New Text"
           onChange={onChange}
           value={value}
         ></textarea>
