@@ -10,5 +10,3 @@ const Work = ({ data }) => {
     </div>
   );
 };
-
-export default Work;
