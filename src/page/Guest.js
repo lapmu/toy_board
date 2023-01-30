@@ -1,27 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import classes from './Guest.module.css'
+import classes from "./Guest.module.css";
 
-const Guest = ({Guest}) => {
-    return(
-        <div className={classes.Guest}>
-            <div className={classes.newGuest}>
-                <Link to="/write">
-                    <div>New Guest</div>
-                </Link>
+// guest 페이지
+const Guest = ({ Guest }) => {
+  return (
+    <div className={classes.Guest}>
+      <div className={classes.newGuest}>
+        {/* 새로운 방명록 작성 링크 */}
+        <Link to="/write">
+          <div>New Guest</div>
+        </Link>
+      </div>
+      <div className={classes.dataGuest}>
+        {/* 방명록 뿌리기 */}
+        {Guest.map((el, idx) => {
+          return (
+            <div key={idx} className={classes.content}>
+              <div className={classes.content_author}>{el.author}</div>
+              <div className={classes.content_title}>{el.title}</div>
             </div>
-            <div className={classes.dataGuest}>
-                {Guest.map((el, idx) => {
-                    
-                    return(
-                        <div key ={idx} className={classes.content}>
-                            <div>{el.author}</div>
-                            <div>{el.title}</div>
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
-        )}
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 export default Guest;
