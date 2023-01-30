@@ -26,6 +26,24 @@ function App() {
       "text":"Hi",
       "img":"none",
   }])
+
+  const onWrite = (author, text) => {
+    if (text === '' || author === '') {
+      return alert('빈 칸을 작성해 주세요')
+    } else {
+      const write = {
+        id: uuidv4(),
+        author,
+        text, 
+        img:"none"
+      }
+      const newData = {...data}
+      newData.guest = [write, ...newData.guest]
+      console.log(newData.guest)
+      setData(newData)
+      // console.log(write)
+    }
+  }
   
   return (
     <BrowserRouter>
@@ -43,7 +61,7 @@ function App() {
                 <Route path="/" element={<Work data={data.post} />} />
                 <Route path="/newpost" element={<NewPost />} />
                 <Route path="/guest" element={<Guest Guest={data.guest}/>} />
-                <Route path="/write" element={<Write />} />
+                <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw />} />
               </Routes>
             </Suspense>

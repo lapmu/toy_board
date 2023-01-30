@@ -1,22 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import classes from "./Write.module.css";
 
 // 방명록 글쓰기
-const Write = () => {
-  // 값이 변경될 때마다 실행
-  // textarea에서 입력한 값을 value라는 값으로 NewPost가 가지고 있는 상태
-  const [value, setValue] = useState("");
+const Write = ({ onWrite }) => {
+    const navigate = useNavigate()
 
-  // textarea이 변경될 때마다 실행
-  const onChange = (e) => {
-    setValue(e.target.value);
+  // 값이 변경될 때마다 실행
+  // input, textarea에서 입력한 값을 value라는 값으로 Write가 가지고 있는 상태
+  const [author, setValueName] = useState("");
+  const [text, setValueText] = useState("");
+
+  // input이 변경될 때마다 실행
+  const onChangeName = (e) => {
+    setValueName(e.target.value);
   };
 
-  // 새로고침 방지
+  // textarea이 변경될 때마다 실행
+  const onChangeText = (e) => {
+    setValueText(e.target.value);
+  };
+
+  // 새로고침 방지 & 내용 비우기 & 상태 끌어올리기?
   const onSubmit = (e) => {
     e.preventDefault();
-    setValue("");
+    onWrite(author, text);
+    setValueName("");
+    setValueText("");
+    navigate('/guest')
   };
 
   return (
@@ -30,12 +42,17 @@ const Write = () => {
             Submit
           </button>
         </div>
-        <input className={classes.input} placeholder="Name"></input>
+        <input
+          className={classes.input}
+          placeholder="Name"
+          onChange={onChangeName}
+          value={author}
+        ></input>
         <textarea
           className={classes.textarea}
           placeholder="New Text"
-          onChange={onChange}
-          value={value}
+          onChange={onChangeText}
+          value={text}
         ></textarea>
       </form>
     </div>
