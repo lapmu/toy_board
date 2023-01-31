@@ -1,9 +1,14 @@
 const dummyData = {
   post: [
     {
+      id: 2,
+      title: "안녕하세요 포스트 2입니다",
+      body: "포스트 2의 내용입니다",
+    },
+    {
       id: 1,
-      title: "post title",
-      body: "post body",
+      title: "포스트 1인데요",
+      body: "내용도 포스트 1입니다",
     },
   ],
   guest: [
