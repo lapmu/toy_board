@@ -8,6 +8,7 @@ const List = ({ data }) => {
       {data.map((el, idx) => {
         return (
           <li key={idx} className={classes.content}>
+            <p>{data.length - idx}</p>
             <a>{el.title}</a>
           </li>
         );

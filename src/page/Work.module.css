@@ -1,15 +1,18 @@
 .main {
-    margin: 1rem 1rem;
     font-family: "SUIT-Regular";
+    font-size: 0.8rem;
+    
     display: flex;
     flex-direction: column;
-    height: 50%;
+    margin: 2rem 2rem;
+    height: 100%;
   }
 
-.buttonContent {
+.backButton {
     display: flex;
     align-items: center;
-    justify-content: right;    
+    justify-content: right; 
+    margin-bottom: 2rem;   
 }
 
 .button {
