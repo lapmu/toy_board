@@ -1,0 +1,29 @@
+.main {
+    margin: 1rem 1rem;
+    font-family: "SUIT-Regular";
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+  }
+
+.buttonContent {
+    display: flex;
+    align-items: center;
+    justify-content: right;    
+}
+
+.button {
+    display: flex;
+    align-items: center;
+
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 50rem;
+    padding: 0.5rem 1rem;
+  
+    background-color: green;
+    color: white;
+  }
+  .button:hover {
+    background-color: rgb(46, 158, 46);
+  }
