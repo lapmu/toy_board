@@ -32,5 +32,15 @@ code {
 
 .ck.ck-reset_all,
 .ck-editor__main {
-  width: 80% !important;
+  width: 100% !important;
+}
+
+.ck-editor {
+  height: 55% !important;
+  width: 99% !important;
+}
+
+.ck-editor__main,
+.ck-content {
+  height: 100% !important;
 }

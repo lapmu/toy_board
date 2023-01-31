@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import classes from "./NewPost.module.css";
@@ -6,7 +7,15 @@ import classes from "./NewPost.module.css";
 const NewPost = () => {
   return (
     <div className={classes.newPost}>
+      <div className={classes.backsubmit}>
+        <Link to="/">
+          <p className={classes.p}>{"<"}</p>
+        </Link>
+        <button className={classes.button}>Submit</button>
+      </div>
+      <label>제목</label>
       <input type="text" className={classes.title}></input>
+      <label>내용</label>
       <CKEditor
         editor={ClassicEditor}
         data="<p>Hello from CKEditor 5!</p>"
