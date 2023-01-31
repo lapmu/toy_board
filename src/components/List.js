@@ -7,7 +7,7 @@ const List = ({ data }) => {
     <div>
       {data.map((el, idx) => {
         return (
-          <li key={idx} className={classes.content}>
+          <li key={idx} className={classes.li}>
             <p>{data.length - idx}</p>
             <a>{el.title}</a>
           </li>
