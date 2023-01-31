@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { lazy, Suspense, useState } from "react";
 import classes from "./App.module.css";
 import dummyData from "./data/dummyData";
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from "uuid";
 
 const Work = lazy(() => import("./page/Work"));
 const NewPost = lazy(() => import("./page/NewPost"));
@@ -14,36 +14,35 @@ const Guest = lazy(() => import("./page/Guest"));
 const Draw = lazy(() => import("./page/Draw"));
 
 function App() {
-  const [data, setData] = useState(dummyData)
-  console.log(data.guest)
-  const [newpost, setNewPost] = useState([ {
-    "id": uuidv4(),
-    "title":"post title",
-    "body":"post body"
-}])
-  const [newWrite, setNewWrite] = useState([{
-      "id": uuidv4(),
-      "author":"moomin",
-      "text":"Hi",
-      "img":"none",
-  }])
+  const [data, setData] = useState(dummyData);
 
   const onWrite = (author, text) => {
-    if (text === '' || author === '') {
-      return alert('빈 칸을 작성해 주세요')
+    if (text === "" || author === "") {
+      return alert("빈 칸을 작성해 주세요");
     } else {
       const write = {
         id: uuidv4(),
         author,
-        text, 
-        img:"none"
-      }
-      const newData = {...data}
-      newData.guest = [write, ...newData.guest]
-      setData(newData)
+        text,
+        img: "none",
+      };
+      const newData = { ...data };
+      newData.guest = [write, ...newData.guest];
+      setData(newData);
     }
-  }
-  
+  };
+
+  const onPost = (body, title) => {
+    const newPost = {
+      id: uuidv4(),
+      title,
+      body,
+    };
+    const newData = { ...data };
+    newData.post = [newPost, ...newData.post];
+    setData(newData);
+  };
+
   return (
     <BrowserRouter>
       <div className={classes.main}>
@@ -58,16 +57,16 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
                 <Route path="/" element={<Work data={data.post} />} />
-                <Route path="/newpost" element={<NewPost />} />
-                <Route path="/guest" element={<Guest Guest={data.guest}/>} />
+                <Route path="/newpost" element={<NewPost onPost={onPost} />} />
+                <Route path="/guest" element={<Guest Guest={data.guest} />} />
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw />} />
               </Routes>
             </Suspense>
           </div>
         </div>
-        <div  className={classes.footer}>
-        <Footer />
+        <div className={classes.footer}>
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
