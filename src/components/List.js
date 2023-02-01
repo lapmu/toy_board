@@ -8,8 +8,9 @@ const List = ({ data }) => {
       {data.map((el, idx) => {
         return (
           <li key={idx} className={classes.li}>
-            <p>{data.length - idx}</p>
-            <a>{el.title}</a>
+            <p className={classes.p}>{data.length - idx}</p>
+            <a className={classes.a}>{el.title}</a>
+            <p>날짜 나오면 좋겠는데</p>
           </li>
         );
       })}

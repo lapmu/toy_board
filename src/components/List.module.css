@@ -14,3 +14,11 @@
 
   height: 2.5rem;
 }
+
+.p {
+  margin-right: 4vw;
+}
+
+.a {
+  flex: 1 0 0;
+}

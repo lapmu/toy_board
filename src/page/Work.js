@@ -8,6 +8,8 @@ const Work = ({ data }) => {
   return (
     <div className={classes.main}>
       <div className={classes.backButton}>
+        <p>Total {data.length}</p>
+        
         <Link to="/newpost">
           <button type="submit" className={classes.button}>
             Submit
