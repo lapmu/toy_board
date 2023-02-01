@@ -1,17 +1,14 @@
 .li {
   margin-bottom: 1rem;
   padding: 1rem;
-
   display: flex;
   align-items: center;
-
   list-style: none;
   outline: none;
   border: none;
   border: 1px;
   box-shadow: 1px 1px 7px gainsboro;
   border-radius: 0.5rem;
-
   height: 2.5rem;
 }
 

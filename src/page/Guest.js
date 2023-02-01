@@ -7,6 +7,7 @@ const Guest = ({ Guest }) => {
   return (
     <div className={classes.Guest}>
       <div className={classes.newGuest}>
+        <p>Total {Guest.length}</p>
         {/* 새로운 방명록 작성 링크 */}
         <Link to="/write">
           <div>New Guest</div>
