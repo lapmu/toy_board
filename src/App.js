@@ -37,6 +37,7 @@ function App() {
       id: uuidv4(),
       title,
       body,
+      createAt: new Date().toLocaleDateString(),
     };
     const newData = { ...data };
     newData.post = [newPost, ...newData.post];
