@@ -1,6 +1,9 @@
-.li {
-  margin-bottom: 1rem;
-  padding: 1rem;
+.main {
+  margin-bottom: 0.6rem;
+  padding: 0.8rem 1rem;
+  
+  font-size: 0.7rem;
+  background-color: #fff;
   display: flex;
   align-items: center;
   list-style: none;
@@ -8,14 +11,15 @@
   border: none;
   border: 1px;
   box-shadow: 1px 1px 7px gainsboro;
-  border-radius: 0.5rem;
-  height: 2.5rem;
+  border-radius: 0.2rem;
 }
 
-.p {
+.idx {
+  margin-left: 0.3rem;
   margin-right: 4vw;
+  width: 1.5rem;
 }
 
-.a {
+.text {
   flex: 1 0 0;
 }
