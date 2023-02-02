@@ -16,18 +16,6 @@ const Draw = lazy(() => import("./page/Draw"));
 function App() {
   const [data, setData] = useState(dummyData);
 
-  const onPost = (body, title, createAt) => {
-    const newPost = {
-      id: uuidv4(),
-      title,
-      body,
-      createAt,
-    };
-    const newData = { ...data };
-    newData.post = [newPost, ...newData.post];
-    setData(newData);
-  };
-
   const onWrite = (author, text) => {
     if (text === "" || author === "") {
       return alert("빈 칸을 작성해 주세요");
@@ -43,6 +31,18 @@ function App() {
       setData(newData);
     }
   };
+
+  const onPost = (body, title, createAt) => {
+    const newPost = {
+      id: uuidv4(),
+      title,
+      body,
+    };
+    const newData = { ...data };
+    newData.post = [newPost, ...newData.post];
+    setData(newData);
+  };
+
 
 
   return (
