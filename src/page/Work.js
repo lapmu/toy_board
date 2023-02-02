@@ -9,14 +9,16 @@ const Work = ({ data }) => {
     <div className={classes.main}>
       <div className={classes.backButton}>
         <p>Total {data.length}</p>
-        
+
         <Link to="/newpost">
           <button type="submit" className={classes.button}>
             Submit
           </button>
         </Link>
       </div>
-      <List data={data} />
+      <div className={classes.body}>
+        <List data={data} />
+      </div>
     </div>
   );
 };
