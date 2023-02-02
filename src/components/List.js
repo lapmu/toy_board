@@ -7,11 +7,11 @@ const List = ({ data }) => {
     <div>
       {data.map((el, idx) => {
         return (
-          <div key={idx} className={classes.main}>
+          <section key={idx} className={classes.main}>
             <div className={classes.idx}>{data.length - idx}</div>
             <div className={classes.text}>{el.title}</div>
-            <p>{el.createAt}</p>
-          </div>
+            <div>{el.createAt}</div>
+          </section>
         );
       })}
     </div>
