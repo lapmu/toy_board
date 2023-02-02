@@ -10,7 +10,7 @@ const List = ({ data }) => {
           <div key={idx} className={classes.main}>
             <div className={classes.idx}>{data.length - idx}</div>
             <div className={classes.text}>{el.title}</div>
-            <p>날짜 나오면 좋겠는데</p>
+            <p>{el.createAt}</p>
           </div>
         );
       })}

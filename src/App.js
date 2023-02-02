@@ -32,7 +32,7 @@ function App() {
     }
   };
 
-  const onPost = (body, title) => {
+  const onPost = (body, title, createAt) => {
     const newPost = {
       id: uuidv4(),
       title,
@@ -43,6 +43,8 @@ function App() {
     newData.post = [newPost, ...newData.post];
     setData(newData);
   };
+
+
 
   return (
     <BrowserRouter>
