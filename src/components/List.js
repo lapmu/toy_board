@@ -7,11 +7,11 @@ const List = ({ data }) => {
     <div>
       {data.map((el, idx) => {
         return (
-          <li key={idx} className={classes.li}>
-            <p className={classes.p}>{data.length - idx}</p>
-            <a className={classes.a}>{el.title}</a>
+          <div key={idx} className={classes.main}>
+            <div className={classes.idx}>{data.length - idx}</div>
+            <div className={classes.text}>{el.title}</div>
             <p>날짜 나오면 좋겠는데</p>
-          </li>
+          </div>
         );
       })}
     </div>
