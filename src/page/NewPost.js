@@ -31,13 +31,14 @@ const NewPost = ({ onPost }) => {
           Submit
         </button>
       </div>
-      <label>제목</label>
+      {/* <label>제목</label> */}
       <input
         type="text"
+        placeholder="Title"
         className={classes.title}
         onChange={titleChangeHandle}
       ></input>
-      <label>내용</label>
+      {/* <label>내용</label> */}
       <CKEditor
         editor={ClassicEditor}
         onChange={(event, editor) => {

@@ -39,9 +39,37 @@ code {
 .ck-editor {
   height: 55% !important;
   width: 99% !important;
+
 }
 
 .ck-editor__main,
 .ck-content {
   height: 100% !important;
 }
+
+.ck-editor {
+  border: none;
+}
+
+/* ck ck-toolbar ck-toolbar_grouping */
+
+.cke_contents{  
+  border: none !important;  
+  border-radius: 0.2rem;
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {  
+  border: none !important;  
+  border-radius: 0.2rem;
+} 
+
+
+
+
+
+
+/* outline: none;
+border: none;
+border: 1px;
+box-shadow: 1px 1px 7px gainsboro;
+border-radius: 0.2rem; */
