@@ -49,7 +49,9 @@ label {
   background-color: rgb(3, 103, 3);
   color: white;
 }
-
 .button:hover {
   background-color: rgb(234, 132, 29);
+}
+.button:active {
+  background-color: rgb(194, 102, 11);
 }

@@ -30,6 +30,9 @@
 .button:hover {
   background-color: rgb(234, 132, 29);
 }
+.button:active {
+  background-color: rgb(194, 102, 11);
+}
 
 .body {
   overflow: auto;
@@ -53,5 +56,4 @@
   border-bottom: 1px solid rgb(3, 103, 3);
   color: rgb(3, 103, 3);
   margin: 0rem 2rem;
-
 }
