@@ -41,6 +41,9 @@ const Write = ({ onWrite }) => {
           <Link to="/guest">
             <p className={classes.p}>{"<"}</p>
           </Link>
+          <Link to="/draw">
+            <div className={classes.draw}>Draw</div>
+          </Link>
           <button className={classes.button} type="submit">
             Submit
           </button>

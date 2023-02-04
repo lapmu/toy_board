@@ -15,7 +15,6 @@ const PostItem = ({ data }) => {
       <div onClick={onBackSpace}>{"<"}</div>
       <div>{data.createAt}</div>
       <div>{data.title}</div>
-      {/* <div>{data.body}</div> */}
       <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
     </>
   );

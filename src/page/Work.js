@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import List from "../components/List";
 
 import classes from "./Work.module.css";
 
-const Work = ({ data }) => {
+const Work = ({ data, onChangeSearch, search }) => {
+
   return (
     <div className={classes.main}>
       <div className={classes.backButton}>
@@ -15,11 +16,11 @@ const Work = ({ data }) => {
           </button>
         </Link>
       </div>
-      <div className={classes.inputDiv}>
-        <input className={classes.input} placeholder="search"></input>
-      </div>
+      <form className={classes.inputDiv} >
+        <input className={classes.input} placeholder="search" onChange={onChangeSearch} ></input>
+      </form>
       <div className={classes.body}>
-        <List data={data} />
+        <List data={data} search={search} />
       </div>
     </div>
   );
