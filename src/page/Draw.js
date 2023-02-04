@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./Draw.module.css";
 
-const Draw = () => {
+const Draw = ({ onDraw }) => {
   const navigate = useNavigate();
   const canvasRef = useRef(null);
   // getCtx
@@ -37,15 +37,13 @@ const Draw = () => {
   };
 
   const buttonClickHandle = () => {
-    if (getCtx === null) {
-      alert("그림을 그려주세요");
-    } else {
-      navigate("/guest");
-    }
+    const drawimg = canvasRef.current.toDataURL();
+    onDraw("kim", drawimg);
+    console.log(drawimg);
+    navigate("/guest");
   };
 
   const changeColor = (e) => {
-    console.log(e.target.textContent);
     if (e.target.textContent === "red") {
       getCtx.strokeStyle = "#ff0000";
     } else if (e.target.textContent === "black") {

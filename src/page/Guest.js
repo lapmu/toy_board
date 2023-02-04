@@ -19,7 +19,11 @@ const Guest = ({ Guest }) => {
           return (
             <div key={idx} className={classes.content}>
               <div className={classes.content_author}>{el.author}</div>
-              <div className={classes.content_text}>{el.text}</div>
+              {el.img === "none" ? (
+                <div className={classes.content_text}>{el.text}</div>
+              ) : (
+                <img src={el.img} className={classes.content_text}></img>
+              )}
             </div>
           );
         })}
