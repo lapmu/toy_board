@@ -6,6 +6,7 @@ import { lazy, Suspense, useState } from "react";
 import classes from "./App.module.css";
 import dummyData from "./data/dummyData";
 import { v4 as uuidv4 } from "uuid";
+import PostItem from "./page/PostItem";
 
 const Work = lazy(() => import("./page/Work"));
 const NewPost = lazy(() => import("./page/NewPost"));
@@ -45,6 +46,7 @@ function App() {
   };
 
 
+
   return (
     <BrowserRouter>
       <div className={classes.main}>
@@ -63,6 +65,11 @@ function App() {
                 <Route path="/guest" element={<Guest Guest={data.guest} />} />
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw />} />
+                {data.post.map((el, idx) => {
+                  return <Route key={idx} path={'/postitem' + idx}
+                  element={<PostItem idx={idx} data={el} />} />
+                  })}
+                {/* <Route path="/postitem" element={<PostItem data={data.post} />} /> */}
               </Routes>
             </Suspense>
           </div>

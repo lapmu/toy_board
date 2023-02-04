@@ -12,6 +12,8 @@
   border: 1px;
   box-shadow: 1px 1px 7px gainsboro;
   border-radius: 0.2rem;
+
+  cursor: pointer;
 }
 
 .idx {
