@@ -1,11 +1,13 @@
+import dummyData from "./data/dummyData";
+import { lazy, Suspense, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
+import classes from "./App.module.css";
+
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import { lazy, Suspense, useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import classes from "./App.module.css";
-import dummyData from "./data/dummyData";
-import { v4 as uuidv4 } from "uuid";
 import PostItem from "./page/PostItem";
 
 const Work = lazy(() => import("./page/Work"));
@@ -44,12 +46,6 @@ function App() {
     setData(newData);
   };
 
-  // work 검색 기능
-  const onChangeSearch = (e) => {
-    setSearch(e.target.value);
-    console.log(e.target.value);
-  };
-
   const onDraw = (author, img) => {
     const draw = {
       id: uuidv4(),
@@ -60,6 +56,16 @@ function App() {
     const newData = { ...data };
     newData.guest = [draw, ...newData.guest];
     setData(newData);
+  };
+
+  // work 검색 기능
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  // post remove
+  const onRemovePost = (e) => {
+    setData(e.target.value);
   };
 
   return (

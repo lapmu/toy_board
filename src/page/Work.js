@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import List from "../components/List";
 
 import classes from "./Work.module.css";
+
+import List from "../components/List";
 
 const Work = ({ data, onChangeSearch, search }) => {
 
