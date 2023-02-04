@@ -5,7 +5,7 @@ import classes from "./Write.module.css";
 
 // 방명록 글쓰기
 const Write = ({ onWrite }) => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // 값이 변경될 때마다 실행
   // input, textarea에서 입력한 값을 value라는 값으로 Write가 가지고 있는 상태
@@ -28,7 +28,7 @@ const Write = ({ onWrite }) => {
     onWrite(author, text);
     setValueName("");
     setValueText("");
-    navigate('/guest')
+    navigate("/guest");
   };
 
   return (
@@ -37,6 +37,9 @@ const Write = ({ onWrite }) => {
         <div className={classes.backsubmit}>
           <Link to="/guest">
             <p className={classes.p}>{"<"}</p>
+          </Link>
+          <Link to="/draw">
+            <div className={classes.draw}>Draw</div>
           </Link>
           <button className={classes.button} type="submit">
             Submit

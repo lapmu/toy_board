@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import classes from "./List.module.css";
 
-const List = ({ data }) => {
+const List = ({ data, searched }) => {
   // id, title, body, createAt
 
   return (
