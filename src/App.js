@@ -41,6 +41,18 @@ function App() {
     setData(newData);
   };
 
+  const onDraw = (author, img) => {
+    const draw = {
+      id: uuidv4(),
+      author,
+      text: "none",
+      img,
+    };
+    const newData = { ...data };
+    newData.guest = [draw, ...newData.guest];
+    setData(newData);
+  };
+
   return (
     <BrowserRouter>
       <div className={classes.main}>
@@ -58,7 +70,7 @@ function App() {
                 <Route path="/newpost" element={<NewPost onPost={onPost} />} />
                 <Route path="/guest" element={<Guest Guest={data.guest} />} />
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
-                <Route path="/draw" element={<Draw />} />
+                <Route path="/draw" element={<Draw onDraw={onDraw} />} />
                 {data.post.map((el, idx) => {
                   return (
                     <Route
