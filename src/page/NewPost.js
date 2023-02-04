@@ -18,8 +18,8 @@ const NewPost = ({ onPost }) => {
       alert("빈 칸을 적어주세요");
     } else {
       onPost(isbody, istitle);
+      navigate("/");
     }
-    navigate("/");
   };
   return (
     <div className={classes.newPost}>

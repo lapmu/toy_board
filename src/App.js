@@ -17,7 +17,7 @@ const Draw = lazy(() => import("./page/Draw"));
 function App() {
   const [data, setData] = useState(dummyData);
 
-  const onPost = (body, title, createAt) => {
+  const onPost = (body, title) => {
     const newPost = {
       id: uuidv4(),
       title,
@@ -30,22 +30,16 @@ function App() {
   };
 
   const onWrite = (author, text) => {
-    if (text === "" || author === "") {
-      return alert("빈 칸을 작성해 주세요");
-    } else {
-      const write = {
-        id: uuidv4(),
-        author,
-        text,
-        img: "none",
-      };
-      const newData = { ...data };
-      newData.guest = [write, ...newData.guest];
-      setData(newData);
-    }
+    const write = {
+      id: uuidv4(),
+      author,
+      text,
+      img: "none",
+    };
+    const newData = { ...data };
+    newData.guest = [write, ...newData.guest];
+    setData(newData);
   };
-
-
 
   return (
     <BrowserRouter>
@@ -66,9 +60,14 @@ function App() {
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw />} />
                 {data.post.map((el, idx) => {
-                  return <Route key={idx} path={'/postitem' + idx}
-                  element={<PostItem idx={idx} data={el} />} />
-                  })}
+                  return (
+                    <Route
+                      key={idx}
+                      path={"/postitem" + idx}
+                      element={<PostItem idx={idx} data={el} />}
+                    />
+                  );
+                })}
                 {/* <Route path="/postitem" element={<PostItem data={data.post} />} /> */}
               </Routes>
             </Suspense>

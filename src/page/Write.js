@@ -5,12 +5,11 @@ import classes from "./Write.module.css";
 
 // 방명록 글쓰기
 const Write = ({ onWrite }) => {
-    const navigate = useNavigate()
-
   // 값이 변경될 때마다 실행
   // input, textarea에서 입력한 값을 value라는 값으로 Write가 가지고 있는 상태
   const [author, setValueName] = useState("");
   const [text, setValueText] = useState("");
+  const navigate = useNavigate();
 
   // input이 변경될 때마다 실행
   const onChangeName = (e) => {
@@ -25,10 +24,14 @@ const Write = ({ onWrite }) => {
   // 새로고침 방지 & 내용 비우기 & 상태 끌어올리기?
   const onSubmit = (e) => {
     e.preventDefault();
-    onWrite(author, text);
-    setValueName("");
-    setValueText("");
-    navigate('/guest')
+    if (text === "" || author === "") {
+      return alert("빈 칸을 작성해 주세요");
+    } else {
+      onWrite(author, text);
+      setValueName("");
+      setValueText("");
+      navigate("/guest");
+    }
   };
 
   return (

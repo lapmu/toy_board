@@ -1,6 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import classes from "./Draw.module.css";
 
 const Draw = () => {
+  const navigate = useNavigate();
   const canvasRef = useRef(null);
   // getCtx
   const [getCtx, setGetCtx] = useState(null);
@@ -33,8 +36,33 @@ const Draw = () => {
     }
   };
 
+  const buttonClickHandle = () => {
+    if (getCtx === null) {
+      alert("그림을 그려주세요");
+    } else {
+      navigate("/guest");
+    }
+  };
+
+  const changeColor = (e) => {
+    console.log(e.target.textContent);
+    if (e.target.textContent === "red") {
+      getCtx.strokeStyle = "#ff0000";
+    } else if (e.target.textContent === "black") {
+      getCtx.strokeStyle = "#000000";
+    }
+  };
+
   return (
     <div className="view">
+      <div className={classes.backsubmit}>
+        <Link to="/guest">
+          <p className={classes.p}>{"<"}</p>
+        </Link>
+        <button className={classes.button} onClick={buttonClickHandle}>
+          Submit
+        </button>
+      </div>
       <div className="canvasWrap">
         <canvas
           className="canvas"
@@ -45,6 +73,8 @@ const Draw = () => {
           onMouseLeave={() => setPainting(false)}
         ></canvas>
       </div>
+      <button onClick={changeColor}>{"red"}</button>
+      <button onClick={changeColor}>{"black"}</button>
     </div>
   );
 };
