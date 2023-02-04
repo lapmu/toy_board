@@ -1,11 +1,13 @@
+import dummyData from "./data/dummyData";
+import { lazy, Suspense, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
+import classes from "./App.module.css";
+
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import { lazy, Suspense, useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import classes from "./App.module.css";
-import dummyData from "./data/dummyData";
-import { v4 as uuidv4 } from "uuid";
 import PostItem from "./page/PostItem";
 
 const Work = lazy(() => import("./page/Work"));
@@ -33,21 +35,15 @@ function App() {
   };
 
   const onWrite = (author, text) => {
-      const write = {
-        id: uuidv4(),
-        author,
-        text,
-        img: "none",
-      };
-      const newData = { ...data };
-      newData.guest = [write, ...newData.guest];
-      setData(newData);
-    }
-
-  // work 검색 기능
-  const onChangeSearch = (e) => {
-    setSearch(e.target.value);
-    console.log(e.target.value);
+    const write = {
+      id: uuidv4(),
+      author,
+      text,
+      img: "none",
+    };
+    const newData = { ...data };
+    newData.guest = [write, ...newData.guest];
+    setData(newData);
   };
 
   const onDraw = (author, img) => {
@@ -60,6 +56,16 @@ function App() {
     const newData = { ...data };
     newData.guest = [draw, ...newData.guest];
     setData(newData);
+  };
+
+  // work 검색 기능
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  // post remove
+  const onRemovePost = (e) => {
+    setData(e.target.value);
   };
 
   return (
@@ -78,7 +84,11 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    <Work data={data.post} onChangeSearch={onChangeSearch} search={search} />
+                    <Work
+                      data={data.post}
+                      onChangeSearch={onChangeSearch}
+                      search={search}
+                    />
                   }
                 />
                 <Route path="/newpost" element={<NewPost onPost={onPost} />} />
@@ -86,15 +96,18 @@ function App() {
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw onDraw={onDraw} />} />
                 {data.post.map((el, idx) => {
-                    return (
-                      <Route
-                        key={idx}
-                        path={"/postitem" + idx}
-                        element={<PostItem idx={idx} data={el} />}
-                      />
-                    );
-                  })}
-                <Route path="/postitem" element={<PostItem data={data.post} />} />
+                  return (
+                    <Route
+                      key={idx}
+                      path={"/postitem" + idx}
+                      element={<PostItem idx={idx} data={el} />}
+                    />
+                  );
+                })}
+                <Route
+                  path="/postitem"
+                  element={<PostItem data={data.post} />}
+                />
               </Routes>
             </Suspense>
           </div>
