@@ -15,6 +15,9 @@ const Work = ({ data }) => {
           </button>
         </Link>
       </div>
+      <div className={classes.inputDiv}>
+        <input className={classes.input} placeholder="search"></input>
+      </div>
       <div className={classes.body}>
         <List data={data} />
       </div>
