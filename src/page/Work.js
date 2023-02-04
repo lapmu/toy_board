@@ -4,8 +4,7 @@ import List from "../components/List";
 
 import classes from "./Work.module.css";
 
-const Work = ({ data, onChangeSearch, onSearch }) => {
-
+const Work = ({ data, onChangeSearch, search }) => {
 
   return (
     <div className={classes.main}>
@@ -17,11 +16,11 @@ const Work = ({ data, onChangeSearch, onSearch }) => {
           </button>
         </Link>
       </div>
-      <div className={classes.inputDiv} >
+      <form className={classes.inputDiv} >
         <input className={classes.input} placeholder="search" onChange={onChangeSearch} ></input>
-      </div>
+      </form>
       <div className={classes.body}>
-        <List data={data} onSearch={onSearch} />
+        <List data={data} search={search} />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Draw = lazy(() => import("./page/Draw"));
 function App() {
   const [data, setData] = useState(dummyData);
   // work input
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const [searchValue, setSearchValue] = useState(data);
 
   const onPost = (body, title, createAt) => {
@@ -49,34 +49,9 @@ function App() {
   };
 
   // work 검색 기능
-  // 입렵값을 받아와 소문자로 변경
   const onChangeSearch = (e) => {
-    e.preventDefault();
     setSearch(e.target.value);
-    // console.log(search)
-
-    if (search) {
-      // console.log(search);
-      const newData = { ...data }; // guest + post
-      const filterData = newData.post.filter((el) => Number(search) === el.id);
-      // console.log(filterData)
-      newData.post = filterData;
-      setSearchValue(newData);
-      console.log(searchValue.post)
-
-    }
-
-    // if (search === undefined) { // 검색어가 없을 경우 전체 리스트 반환
-    //   setSearchValue(data);
-    // } else { // 검색 구현
-    //   console.log(search)
-    //   const newData = { ...data }; // guest + post
-    //   const filterData = newData.post.filter(el => search === el.id)
-    //   console.log(filterData)
-    //   newData.post = filterData
-    //   console.log(newData.post)
-    //   setSearchValue(newData)
-    // }
+    console.log(e.target.value);
   };
 
   return (
@@ -95,7 +70,7 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    <Work data={data.post} onChangeSearch={onChangeSearch} />
+                    <Work data={data.post} onChangeSearch={onChangeSearch} search={search} />
                   }
                 />
                 <Route path="/newpost" element={<NewPost onPost={onPost} />} />
@@ -103,28 +78,16 @@ function App() {
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw />} />
 
-                {searchValue
-                  ? searchValue.post.map((el, idx) => {
-                      return (
-                        <Route
-                          key={idx}
-                          path={"/postitem" + idx}
-                          element={<PostItem idx={idx} data={el} />}
-                        />
-                      );
-                    })
-                  : null}
-
-                {/* {data.post.map((el, idx) => {
-                  return (
-                    <Route
-                      key={idx}
-                      path={"/postitem" + idx}
-                      element={<PostItem idx={idx} data={el} />}
-                    />
-                  );
-                })} */}
-                {/* <Route path="/postitem" element={<PostItem data={data.post} />} /> */}
+                {data.post.map((el, idx) => {
+                    return (
+                      <Route
+                        key={idx}
+                        path={"/postitem" + idx}
+                        element={<PostItem idx={idx} data={el} />}
+                      />
+                    );
+                  })}
+                <Route path="/postitem" element={<PostItem data={data.post} />} />
               </Routes>
             </Suspense>
           </div>
