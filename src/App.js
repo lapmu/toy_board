@@ -43,7 +43,6 @@ function App() {
       newData.guest = [write, ...newData.guest];
       setData(newData);
     }
-  };
 
   // work 검색 기능
   const onChangeSearch = (e) => {
@@ -85,7 +84,6 @@ function App() {
                     );
                   })}
                 <Route path="/postitem" element={<PostItem data={data.post} />} />
-
               </Routes>
             </Suspense>
           </div>
