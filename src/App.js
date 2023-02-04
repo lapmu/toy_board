@@ -47,7 +47,6 @@ function App() {
   // work 검색 기능
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
-    console.log(e.target.value);
   };
 
   const onDraw = (author, img) => {
