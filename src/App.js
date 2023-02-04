@@ -20,7 +20,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [searchValue, setSearchValue] = useState(data);
 
-  const onPost = (body, title, createAt) => {
+  const onPost = (body, title) => {
     const newPost = {
       id: uuidv4(),
       title,
@@ -33,9 +33,6 @@ function App() {
   };
 
   const onWrite = (author, text) => {
-    if (text === "" || author === "") {
-      return alert("빈 칸을 채워 주세요");
-    } else {
       const write = {
         id: uuidv4(),
         author,
@@ -88,6 +85,7 @@ function App() {
                     );
                   })}
                 <Route path="/postitem" element={<PostItem data={data.post} />} />
+
               </Routes>
             </Suspense>
           </div>
