@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import classes from "./App.module.css";
 import dummyData from "./data/dummyData";
 import { v4 as uuidv4 } from "uuid";
@@ -16,6 +16,9 @@ const Draw = lazy(() => import("./page/Draw"));
 
 function App() {
   const [data, setData] = useState(dummyData);
+  // work input
+  const [search, setSearch] = useState("");
+  const [searchValue, setSearchValue] = useState(data);
 
   const onPost = (body, title) => {
     const newPost = {
@@ -39,6 +42,12 @@ function App() {
     const newData = { ...data };
     newData.guest = [write, ...newData.guest];
     setData(newData);
+  };
+
+  // work 검색 기능
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
   };
 
   const onDraw = (author, img) => {
@@ -66,7 +75,16 @@ function App() {
           <div className={classes.content}>
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
-                <Route path="/" element={<Work data={data.post} />} />
+                <Route
+                  path="/"
+                  element={
+                    <Work
+                      data={data.post}
+                      onChangeSearch={onChangeSearch}
+                      search={search}
+                    />
+                  }
+                />
                 <Route path="/newpost" element={<NewPost onPost={onPost} />} />
                 <Route path="/guest" element={<Guest Guest={data.guest} />} />
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
@@ -80,7 +98,10 @@ function App() {
                     />
                   );
                 })}
-                {/* <Route path="/postitem" element={<PostItem data={data.post} />} /> */}
+                <Route
+                  path="/postitem"
+                  element={<PostItem data={data.post} />}
+                />
               </Routes>
             </Suspense>
           </div>

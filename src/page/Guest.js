@@ -22,7 +22,7 @@ const Guest = ({ Guest }) => {
               {el.img === "none" ? (
                 <div className={classes.content_text}>{el.text}</div>
               ) : (
-                <img src={el.img} className={classes.content_text}></img>
+                <img src={el.img} className={classes.content_img}></img>
               )}
             </div>
           );

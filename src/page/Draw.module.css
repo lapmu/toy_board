@@ -26,3 +26,22 @@
   background-color: rgb(3, 103, 3);
   color: white;
 }
+
+.draw {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+
+  background-color: white;
+  color: rgb(3, 103, 3);
+}
+.draw:hover {
+  background-color: rgb(234, 132, 29);
+  color: white;
+}
+.draw:active {
+  background-color: rgb(194, 102, 11);
+}

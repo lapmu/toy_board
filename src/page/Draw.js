@@ -39,7 +39,6 @@ const Draw = ({ onDraw }) => {
   const buttonClickHandle = () => {
     const drawimg = canvasRef.current.toDataURL();
     onDraw("kim", drawimg);
-    console.log(drawimg);
     navigate("/guest");
   };
 
@@ -48,6 +47,18 @@ const Draw = ({ onDraw }) => {
       getCtx.strokeStyle = "#ff0000";
     } else if (e.target.textContent === "black") {
       getCtx.strokeStyle = "#000000";
+    } else if (e.target.textContent === "orange") {
+      getCtx.strokeStyle = "#ffaf00";
+    } else if (e.target.textContent === "yellow") {
+      getCtx.strokeStyle = "#ffff00";
+    } else if (e.target.textContent === "green") {
+      getCtx.strokeStyle = "#00ff00";
+    } else if (e.target.textContent === "blue") {
+      getCtx.strokeStyle = "#0000ff";
+    } else if (e.target.textContent === "puple") {
+      getCtx.strokeStyle = "#ff00ff";
+    } else if (e.target.textContent === "white") {
+      getCtx.strokeStyle = "#ffffff";
     }
   };
 
@@ -56,6 +67,9 @@ const Draw = ({ onDraw }) => {
       <div className={classes.backsubmit}>
         <Link to="/guest">
           <p className={classes.p}>{"<"}</p>
+        </Link>
+        <Link to="/write">
+          <div className={classes.draw}>Write</div>
         </Link>
         <button className={classes.button} onClick={buttonClickHandle}>
           Submit
@@ -72,6 +86,12 @@ const Draw = ({ onDraw }) => {
         ></canvas>
       </div>
       <button onClick={changeColor}>{"red"}</button>
+      <button onClick={changeColor}>{"orange"}</button>
+      <button onClick={changeColor}>{"yellow"}</button>
+      <button onClick={changeColor}>{"green"}</button>
+      <button onClick={changeColor}>{"blue"}</button>
+      <button onClick={changeColor}>{"puple"}</button>
+      <button onClick={changeColor}>{"white"}</button>
       <button onClick={changeColor}>{"black"}</button>
     </div>
   );

@@ -37,12 +37,25 @@
 
 .content {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
   flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
   border: 1px solid black;
   height: 40%;
   width: 20%;
   margin-left: 5%;
   margin-bottom: 5%;
+}
+
+.content_img {
+  height: 100%;
+  width: 100%;
+}
+
+.content_text {
+  word-break: break-all;
+}
+
+.content_author {
+  word-break: break-all;
 }

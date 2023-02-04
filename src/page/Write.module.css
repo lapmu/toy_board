@@ -22,6 +22,25 @@
   color: darkgray;
 }
 
+.draw {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+
+  background-color: white;
+  color: rgb(3, 103, 3);
+}
+.draw:hover {
+  background-color: rgb(234, 132, 29);
+  color: white;
+}
+.draw:active {
+  background-color: rgb(194, 102, 11);
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -35,6 +54,9 @@
 }
 .button:hover {
   background-color: rgb(234, 132, 29);
+}
+.button:active {
+  background-color: rgb(194, 102, 11);
 }
 
 .textarea {
@@ -50,7 +72,6 @@
   box-shadow: 1px 1px 7px gainsboro;
   border-radius: 0.2rem;
 }
-
 
 .input {
   margin-bottom: 1rem;
