@@ -4,7 +4,7 @@
 
   margin-top: 3rem;
   width: 100%;
-  height: 80%;
+  height: 90%;
 }
 
 .backspace {
@@ -15,7 +15,7 @@
 .title {
   width: 100%;
   height: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   padding: 1rem;
 
   outline: none;

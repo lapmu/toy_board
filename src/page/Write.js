@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import BackSpace from "../components/UI/BackSpace";
+import Button from "../components/UI/Button";
 
 import classes from "./Write.module.css";
 
@@ -36,31 +38,29 @@ const Write = ({ onWrite }) => {
 
   return (
     <div className={classes.main}>
-      <form className={classes.form} onSubmit={onSubmit}>
-        <div className={classes.backsubmit}>
-          <Link to="/guest">
-            <p className={classes.p}>{"<"}</p>
-          </Link>
-          <Link to="/draw">
-            <div className={classes.draw}>Draw</div>
-          </Link>
-          <button className={classes.button} type="submit">
-            Submit
-          </button>
-        </div>
-        <input
-          className={classes.input}
-          placeholder="Name"
-          onChange={onChangeName}
-          value={author}
-        ></input>
-        <textarea
-          className={classes.textarea}
-          placeholder="New Text"
-          onChange={onChangeText}
-          value={text}
-        ></textarea>
-      </form>
+      <div className={classes.content}>
+        <BackSpace to="/guest" />
+      </div>
+        <form className={classes.form} onSubmit={onSubmit}>
+          <div className={classes.backsubmit}>
+            <Link to="/draw">
+              <div className={classes.draw}>Draw In Canvas</div>
+            </Link>
+          </div>
+          <input
+            className={classes.input}
+            placeholder="Name"
+            onChange={onChangeName}
+            value={author}
+          ></input>
+          <textarea
+            className={classes.textarea}
+            placeholder="New Text"
+            onChange={onChangeText}
+            value={text}
+          ></textarea>
+        </form>
+        <Button type="submit">Submit</Button>
     </div>
   );
 };
