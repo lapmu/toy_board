@@ -20,7 +20,7 @@ function App() {
   const [data, setData] = useState(dummyData);
   // work input
   const [search, setSearch] = useState("");
-  const [searchValue, setSearchValue] = useState(data);
+  const [selectedPost, setSelectedPost] = useState(null)
 
   const onPost = (body, title) => {
     const newPost = {
@@ -63,9 +63,14 @@ function App() {
     setSearch(e.target.value);
   };
 
+  const onChangeSelectedPost = (post) => {
+    setSelectedPost(post);
+  };
+
   // post remove
-  const onRemovePost = (e) => {
-    setData(e.target.value);
+  const onRemovePost = (id) => {
+    const newData = { ...data };
+    setData(newData => newData.post.filter(datas => datas.id !== id));
   };
 
   return (
@@ -106,7 +111,7 @@ function App() {
                 })}
                 <Route
                   path="/postitem"
-                  element={<PostItem data={data.post} />}
+                  element={<PostItem data={data.post} onRemovePost={onRemovePost} selectedPost={selectedPost} />}
                 />
               </Routes>
             </Suspense>
