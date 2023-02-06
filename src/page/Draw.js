@@ -77,7 +77,7 @@ const Draw = ({ onDraw }) => {
   return (
     <div className={classes.main}>
       <div className={classes.BackSpaceDiv}>
-        <BackSpace to="guest" />
+        <BackSpace to="/guest" />
       </div>
       <div className={classes.backsubmit}>
         <Link to="/write">

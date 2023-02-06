@@ -6,13 +6,20 @@ import classes from "./PostItem.module.css";
 import BackSpace from "../components/UI/BackSpace";
 import Button from "../components/UI/Button";
 
-const PostItem = ({ data, onRemovePost, selectedPost }) => {
+const PostItem = ({ data, el, idx, onRemovePost, selectedPost  }) => {
   const navigate = useNavigate();
   const [value, setValue] = useState("");
 
   const onBackSpace = (e) => {
     navigate("/work");
   };
+
+const deletePostHandle = () => {
+  onRemovePost(idx);
+  navigate('/work')
+};
+  
+
 
   useEffect(() => {
     if (selectedPost) {
@@ -42,9 +49,7 @@ const PostItem = ({ data, onRemovePost, selectedPost }) => {
           <Button
             type="submit"
             value={value}
-            onClick={() => {
-              onRemovePost(selectedPost.post.id);
-            }}
+            onClick={deletePostHandle}
           >
             delete
           </Button>

@@ -69,10 +69,11 @@ function App() {
     setSelectedPost(post);
   };
 
-  // post remove
-  const onRemovePost = (id) => {
+  const onRemovePost = (idx) => {
     const newData = { ...data };
-    setData(newData => newData.post.filter(datas => datas.id !== id));
+    const filtered = newData.post.filter((el, indx) => indx !== idx);
+    newData.post = filtered;
+    setData(newData);
   };
 
   const onRemoveGuest = (idx) => {
@@ -119,14 +120,10 @@ function App() {
                     <Route
                       key={idx}
                       path={"/postitem" + idx}
-                      element={<PostItem idx={idx} data={el} />}
+                      element={<PostItem idx={idx} data={el} onRemovePost={onRemovePost} selectedPost={selectedPost}/>}
                     />
                   );
                 })}
-                <Route
-                  path="/postitem"
-                  element={<PostItem data={data.post} onRemovePost={onRemovePost} selectedPost={selectedPost} />}
-                />
               </Routes>
             </Suspense>
           </div>
