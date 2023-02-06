@@ -5,11 +5,13 @@ import { v4 as uuidv4 } from "uuid";
 
 import classes from "./App.module.css";
 
-import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import PostItem from "./page/PostItem";
 
+const Main = lazy(() => import("./page/Main"));
+const AboutUs = lazy(() => import("./page/AboutUs"));
+const Menu = lazy(() => import("./page/Menu"));
 const Work = lazy(() => import("./page/Work"));
 const NewPost = lazy(() => import("./page/NewPost"));
 const Write = lazy(() => import("./page/Write"));
@@ -84,17 +86,17 @@ function App() {
     <BrowserRouter>
       <div className={classes.main}>
         <div className={classes.header}>
-          <Header />
+            <Nav />
         </div>
         <div className={classes.body}>
-          <div className={classes.nav}>
-            <Nav />
-          </div>
           <div className={classes.content}>
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/menu" element={<Menu />} />
                 <Route
-                  path="/"
+                  path="/work"
                   element={
                     <Work
                       data={data.post}
