@@ -57,7 +57,7 @@ const Draw = ({ onDraw }) => {
     } else if (e.target.textContent === "blue") {
       getCtx.strokeStyle = "#0000ff";
     } else if (e.target.textContent === "puple") {
-      getCtx.strokeStyle = "#ff00ff";
+      getCtx.strokeStyle = "#9900ff";
     } else if (e.target.textContent === "white") {
       getCtx.strokeStyle = "#ffffff";
     }

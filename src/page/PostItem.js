@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import classes from "./PpstItem.module.css";
 
-const PostItem = ({ data }) => {
+const PostItem = ({ data, onRemovePost, selectedPost }) => {
   const navigate = useNavigate();
+  const [value, setValue] = useState('')
 
   const onBackSpace = (e) => {
     navigate("/");
   };
+
+  useEffect(() => {
+    if (selectedPost) {
+      setValue(selectedPost.id)
+    }
+  }, [selectedPost])
 
   return (
     <div className={classes.main}>
@@ -19,10 +26,10 @@ const PostItem = ({ data }) => {
         <div>
           {" "}
           {/* 추후 아이콘으로 바꿀 거 고려해 보기 */}
-          <button className={classes.button} type="submit">
+          <button className={classes.button} type="submit" value={value}>
             edit
           </button>
-          <button className={classes.button} type="submit">
+          <button className={classes.button} type="submit" value={value} onClick={() => {onRemovePost(selectedPost.post.id)}}>
             delete
           </button>
         </div>
