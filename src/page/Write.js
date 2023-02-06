@@ -38,7 +38,7 @@ const Write = ({ onWrite }) => {
 
   return (
     <div className={classes.main}>
-      <div className={classes.content}>
+      <div className={classes.BackSpaceDiv}>
         <BackSpace to="/guest" />
       </div>
         <form className={classes.form} onSubmit={onSubmit}>
@@ -60,7 +60,7 @@ const Write = ({ onWrite }) => {
             value={text}
           ></textarea>
         </form>
-        <Button type="submit">Submit</Button>
+        <Button type="submit" onClick={onSubmit}>Submit</Button>
     </div>
   );
 };
