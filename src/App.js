@@ -1,13 +1,18 @@
 import dummyData from "./data/dummyData";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-
 import classes from "./App.module.css";
-
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import PostItem from "./page/PostItem";
+import Clear from "./img/weather/Clear.jpg";
+import Clouds from "./img/weather/Clouds.jpg";
+import Drizzle from "./img/weather/Drizzle.jpg";
+import Mist from "./img/weather/Mist.jpg";
+import Rain from "./img/weather/Rain.jpg";
+import Snow from "./img/weather/Snow.jpg";
+import Thunderstorm from "./img/weather/Thunderstorm.jpg";
 
 const Main = lazy(() => import("./page/Main"));
 const AboutUs = lazy(() => import("./page/AboutUs"));
@@ -22,7 +27,16 @@ function App() {
   const [data, setData] = useState(dummyData);
   // work input
   const [search, setSearch] = useState("");
-  const [selectedPost, setSelectedPost] = useState(null)
+  const [selectedPost, setSelectedPost] = useState(null);
+  const [isweather, setWeather] = useState("Clear");
+
+  useEffect(() => {
+    fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=6279bf02499d70eacd730c4b49f0e04b"
+    )
+      .then((data) => data.json())
+      .then((data) => setWeather(data.weather[0].main));
+  }, []);
 
   const onPost = (body, title) => {
     const newPost = {
@@ -85,9 +99,29 @@ function App() {
 
   return (
     <BrowserRouter>
+      <div className={classes.background}>
+        <img
+          src={
+            isweather === "Clear"
+              ? Clear
+              : isweather === "Clouds"
+              ? Clouds
+              : isweather === "Drizzle"
+              ? Drizzle
+              : isweather === "Rain"
+              ? Rain
+              : isweather === "Snow"
+              ? Snow
+              : isweather === "Thunderstorm"
+              ? Thunderstorm
+              : Mist
+          }
+          alt={isweather}
+        />
+      </div>
       <div className={classes.main}>
         <div className={classes.header}>
-            <Nav />
+          <Nav />
         </div>
         <div className={classes.body}>
           <div className={classes.content}>
