@@ -43,6 +43,8 @@ const Draw = ({ onDraw }) => {
       const drawimg = canvasRef.current.toDataURL();
       onDraw(name, drawimg);
       navigate("/guest");
+    } else {
+      alert("이름을 입력해 주세요.");
     }
   };
 

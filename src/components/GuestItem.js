@@ -12,11 +12,16 @@ const GuestItem = ({ el, idx, onRemoveGuest }) => {
     onRemoveGuest(idx);
     setModal(!modal);
   };
+
+  const prevendEventPropagation = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <>
       {modal ? (
-        <div className={classes.modal}>
-          <div className={classes.modal_body}>
+        <div className={classes.modal} onClick={modalHandle}>
+          <div className={classes.modal_body} onClick={prevendEventPropagation}>
             <div className={classes.modal_header}>
               <div onClick={deleteGuestHandle}>🗑</div>
               <div className={classes.modal_close} onClick={modalHandle}>
