@@ -25,7 +25,7 @@ const NewPost = ({ onPost }) => {
   return (
     <div className={classes.newPost}>
       <div className={classes.backsubmit}>
-        <Link to="/">
+        <Link to="/work">
           <p className={classes.p}>{"<"}</p>
         </Link>
         <button className={classes.button} onClick={buttonClickHandle}>

@@ -20,7 +20,7 @@ const PostItem = ({ data, onRemovePost, selectedPost }) => {
   return (
     <div className={classes.main}>
       <div className={classes.backsubmit}>
-        <Link to="/">
+        <Link to="/work">
           <p className={classes.p}>{"<"}</p>
         </Link>
         <div>
