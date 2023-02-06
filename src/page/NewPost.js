@@ -4,6 +4,8 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 import classes from "./NewPost.module.css";
+import Button from "../components/UI/Button";
+import BackSpace from "../components/UI/BackSpace";
 
 const NewPost = ({ onPost }) => {
   const [isbody, setbody] = useState("");
@@ -16,37 +18,33 @@ const NewPost = ({ onPost }) => {
 
   const buttonClickHandle = () => {
     if (isbody === "" || istitle === "") {
-      alert("빈 칸을 적어주세요");
+      alert("빈 칸을 작성해 주세요");
     } else {
       onPost(isbody, istitle);
-      navigate("/");
+      navigate("/work");
     }
   };
   return (
     <div className={classes.newPost}>
-      <div className={classes.backsubmit}>
-        <Link to="/work">
-          <p className={classes.p}>{"<"}</p>
-        </Link>
-        <button className={classes.button} onClick={buttonClickHandle}>
-          Submit
-        </button>
+      <BackSpace to='/work' />
+      <div className={classes.newPost}>
+        <input
+          type="text"
+          placeholder="Title"
+          className={classes.title}
+          onChange={titleChangeHandle}
+        ></input>
+        <CKEditor
+          editor={ClassicEditor}
+          onChange={(event, editor) => {
+            const data = editor.getData();
+            setbody(data);
+          }}
+        />
       </div>
-      {/* <label>제목</label> */}
-      <input
-        type="text"
-        placeholder="Title"
-        className={classes.title}
-        onChange={titleChangeHandle}
-      ></input>
-      {/* <label>내용</label> */}
-      <CKEditor
-        editor={ClassicEditor}
-        onChange={(event, editor) => {
-          const data = editor.getData();
-          setbody(data);
-        }}
-      />
+      <Button onClick={buttonClickHandle}>
+        Submit
+      </Button>
     </div>
   );
 };

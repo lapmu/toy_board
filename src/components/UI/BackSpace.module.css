@@ -1,0 +1,5 @@
+.backspace {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+  }

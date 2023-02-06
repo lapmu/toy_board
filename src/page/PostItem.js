@@ -1,46 +1,54 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import classes from "./PpstItem.module.css";
+import classes from "./PostItem.module.css";
+
+import BackSpace from "../components/UI/BackSpace";
+import Button from "../components/UI/Button";
 
 const PostItem = ({ data, onRemovePost, selectedPost }) => {
   const navigate = useNavigate();
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState("");
 
   const onBackSpace = (e) => {
-    navigate("/");
+    navigate("/work");
   };
 
   useEffect(() => {
     if (selectedPost) {
-      setValue(selectedPost.id)
+      setValue(selectedPost.id);
     }
-  }, [selectedPost])
+  }, [selectedPost]);
 
   return (
     <div className={classes.main}>
-      <div className={classes.backsubmit}>
-        <Link to="/work">
-          <p className={classes.p}>{"<"}</p>
-        </Link>
-        <div>
-          {" "}
-          {/* 추후 아이콘으로 바꿀 거 고려해 보기 */}
-          <button className={classes.button} type="submit" value={value}>
-            edit
-          </button>
-          <button className={classes.button} type="submit" value={value} onClick={() => {onRemovePost(selectedPost.post.id)}}>
-            delete
-          </button>
-        </div>
-      </div>
       <div className={classes.content}>
-        <div className={classes.title}>{data.title}</div>
-        <div
-          className={classes.body}
-          dangerouslySetInnerHTML={{ __html: data.body }}
-        ></div>
-        <div className={classes.createAt}>{data.createAt}</div>
+        <BackSpace to="/work" />
+        <div>
+          <div className={classes.title}>{data.title}</div>
+
+          <div
+            className={classes.body}
+            dangerouslySetInnerHTML={{ __html: data.body }}
+          />
+
+          <div className={classes.createAt}>{data.createAt}</div>
+        </div>
+
+        <div className={classes.backsubmit}>
+          <Button type="submit" value={value}>
+            edit
+          </Button>
+          <Button
+            type="submit"
+            value={value}
+            onClick={() => {
+              onRemovePost(selectedPost.post.id);
+            }}
+          >
+            delete
+          </Button>
+        </div>
       </div>
     </div>
   );
