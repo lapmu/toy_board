@@ -32,6 +32,9 @@
   height: 90%;
   overflow: auto;
 }
+.dataGuest::-webkit-scrollbar { 
+  display: none; /* 스크롤 감추기 Chrome, Safari, Opera*/
+}
 
 .button {
   display: flex;

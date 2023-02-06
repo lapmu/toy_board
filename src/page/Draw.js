@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import BackSpace from "../components/UI/BackSpace";
+import Button from "../components/UI/Button";
 
 import classes from "./Draw.module.css";
 
@@ -16,7 +18,7 @@ const Draw = ({ onDraw }) => {
     // canvas useRef
     const canvas = canvasRef.current;
     canvas.width = 1000;
-    canvas.height = 500;
+    canvas.height = 350;
     const ctx = canvas.getContext("2d");
     ctx.lineJoin = "round";
     ctx.lineWidth = 2.5;
@@ -49,20 +51,20 @@ const Draw = ({ onDraw }) => {
   };
 
   const changeColor = (e) => {
-    if (e.target.textContent === "red") {
-      getCtx.strokeStyle = "#ff0000";
+    if (e.target.textContent === "Red") {
+      getCtx.strokeStyle = "#e4491e";
     } else if (e.target.textContent === "black") {
       getCtx.strokeStyle = "#000000";
     } else if (e.target.textContent === "orange") {
-      getCtx.strokeStyle = "#ffaf00";
+      getCtx.strokeStyle = "#fba818";
     } else if (e.target.textContent === "yellow") {
-      getCtx.strokeStyle = "#ffff00";
+      getCtx.strokeStyle = "#fce72b";
     } else if (e.target.textContent === "green") {
-      getCtx.strokeStyle = "#00ff00";
+      getCtx.strokeStyle = "#73d573";
     } else if (e.target.textContent === "blue") {
-      getCtx.strokeStyle = "#0000ff";
+      getCtx.strokeStyle = "#48b0ff";
     } else if (e.target.textContent === "puple") {
-      getCtx.strokeStyle = "#9900ff";
+      getCtx.strokeStyle = "#9768f6";
     } else if (e.target.textContent === "white") {
       getCtx.strokeStyle = "#ffffff";
     }
@@ -74,16 +76,13 @@ const Draw = ({ onDraw }) => {
 
   return (
     <div className={classes.main}>
+      <div className={classes.BackSpaceDiv}>
+        <BackSpace to="guest" />
+      </div>
       <div className={classes.backsubmit}>
-        <Link to="/guest">
-          <p className={classes.p}>{"<"}</p>
-        </Link>
         <Link to="/write">
           <div className={classes.draw}>Write</div>
         </Link>
-        <button className={classes.button} onClick={buttonClickHandle}>
-          Submit
-        </button>
       </div>
       <div className="canvasWrap">
         <input
@@ -103,7 +102,7 @@ const Draw = ({ onDraw }) => {
       </div>
       <div className={classes.color}>
         <button className={classes.red} onClick={changeColor}>
-          {"red"}
+          {"Red"}
         </button>
         <button className={classes.orange} onClick={changeColor}>
           {"orange"}
@@ -127,6 +126,9 @@ const Draw = ({ onDraw }) => {
           {"black"}
         </button>
       </div>
+      <Button className={classes.button} onClick={buttonClickHandle}>
+        Submit
+      </Button>
     </div>
   );
 };
