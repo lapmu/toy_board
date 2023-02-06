@@ -19,8 +19,9 @@ const Work = ({ data, onChangeSearch, search }) => {
           ></input>
         </form>
       </div>
-      <div className={classes.content}>
+      <div className={classes.total}>
         <p>Total {data.length}</p>
+      </div>
         <Link to="/newpost">
           <Button type="submit" className={classes.button}>
             New Post
@@ -29,7 +30,6 @@ const Work = ({ data, onChangeSearch, search }) => {
         <div className={classes.body}>
           <List data={data} search={search} />
         </div>
-      </div>
     </div>
   );
 };
