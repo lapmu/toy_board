@@ -52,6 +52,7 @@
   border: 1px solid black;
 }
 
+
 .modal {
   position: absolute;
   top: 0;
@@ -68,13 +69,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .modal_body {
-  width: 400px;
-  height: 400px;
-  background-color: rgb(224, 224, 224);
-  padding: 25px;
+  width: 700px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  padding: 3rem;
 }
 
 .modal_close {
@@ -83,12 +87,15 @@
 
 .modal_text,
 .modal_img {
-  height: 70%;
+  height: 75%;
   width: 100%;
   background-color: white;
-  margin-top: 5%;
+  margin-top: 4rem;
+  font-size: 1rem;
 }
 
 .modal_author {
   text-align: end;
+  font-size: 1rem;
+  height: 1rem;
 }
