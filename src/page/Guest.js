@@ -11,7 +11,7 @@ const Guest = ({ Guest, onRemoveGuest }) => {
         <p>Total {Guest.length}</p>
         {/* 새로운 방명록 작성 링크 */}
         <Link to="/write">
-          <div>New Guest</div>
+          <button className={classes.button}>New Guest</button>
         </Link>
       </div>
       <div className={classes.dataGuest}>

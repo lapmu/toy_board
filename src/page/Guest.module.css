@@ -13,7 +13,6 @@
 }
 
 .newGuest {
-  border: 1px solid black;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -24,7 +23,6 @@
 }
 
 .dataGuest {
-  border: 1px solid black;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -33,4 +31,23 @@
   height: 90%;
   padding: 4% 4% 4% 0;
   overflow: auto;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+
+  background-color: rgb(3, 103, 3);
+  color: white;
+}
+.button:hover {
+  background-color: rgb(234, 132, 29);
+}
+.button:active {
+  background-color: rgb(194, 102, 11);
 }

@@ -10,6 +10,7 @@ const Draw = ({ onDraw }) => {
   const [getCtx, setGetCtx] = useState(null);
   // painting state
   const [painting, setPainting] = useState(false);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     // canvas useRef
@@ -38,9 +39,11 @@ const Draw = ({ onDraw }) => {
   };
 
   const buttonClickHandle = () => {
-    const drawimg = canvasRef.current.toDataURL();
-    onDraw("kim", drawimg);
-    navigate("/guest");
+    if (name !== "") {
+      const drawimg = canvasRef.current.toDataURL();
+      onDraw(name, drawimg);
+      navigate("/guest");
+    }
   };
 
   const changeColor = (e) => {
@@ -63,8 +66,12 @@ const Draw = ({ onDraw }) => {
     }
   };
 
+  const onChangeName = (e) => {
+    setName(e.target.value);
+  };
+
   return (
-    <div className="view">
+    <div className={classes.main}>
       <div className={classes.backsubmit}>
         <Link to="/guest">
           <p className={classes.p}>{"<"}</p>
@@ -77,8 +84,14 @@ const Draw = ({ onDraw }) => {
         </button>
       </div>
       <div className="canvasWrap">
+        <input
+          className={classes.input}
+          placeholder="Name"
+          onChange={onChangeName}
+          value={name}
+        ></input>
         <canvas
-          className="canvas"
+          className={classes.canvas}
           ref={canvasRef}
           onMouseDown={() => setPainting(true)}
           onMouseUp={() => setPainting(false)}
@@ -86,14 +99,32 @@ const Draw = ({ onDraw }) => {
           onMouseLeave={() => setPainting(false)}
         ></canvas>
       </div>
-      <button onClick={changeColor}>{"red"}</button>
-      <button onClick={changeColor}>{"orange"}</button>
-      <button onClick={changeColor}>{"yellow"}</button>
-      <button onClick={changeColor}>{"green"}</button>
-      <button onClick={changeColor}>{"blue"}</button>
-      <button onClick={changeColor}>{"puple"}</button>
-      <button onClick={changeColor}>{"white"}</button>
-      <button onClick={changeColor}>{"black"}</button>
+      <div className={classes.color}>
+        <button className={classes.red} onClick={changeColor}>
+          {"red"}
+        </button>
+        <button className={classes.orange} onClick={changeColor}>
+          {"orange"}
+        </button>
+        <button className={classes.yellow} onClick={changeColor}>
+          {"yellow"}
+        </button>
+        <button className={classes.green} onClick={changeColor}>
+          {"green"}
+        </button>
+        <button className={classes.blue} onClick={changeColor}>
+          {"blue"}
+        </button>
+        <button className={classes.puple} onClick={changeColor}>
+          {"puple"}
+        </button>
+        <button className={classes.white} onClick={changeColor}>
+          {"white"}
+        </button>
+        <button className={classes.black} onClick={changeColor}>
+          {"black"}
+        </button>
+      </div>
     </div>
   );
 };

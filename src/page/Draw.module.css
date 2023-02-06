@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+.main {
+  margin: 2rem 2rem;
+  font-family: "SUIT-Regular";
+  overflow: hidden;
+}
+
 .backsubmit {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .p {
@@ -22,9 +28,14 @@
   border: none;
   border-radius: 50rem;
   padding: 0.5rem 1rem;
-
   background-color: rgb(3, 103, 3);
   color: white;
+}
+.button:hover {
+  background-color: rgb(234, 132, 29);
+}
+.button:active {
+  background-color: rgb(194, 102, 11);
 }
 
 .draw {
@@ -34,7 +45,6 @@
   border: none;
   border-radius: 50rem;
   padding: 0.5rem 1rem;
-
   background-color: white;
   color: rgb(3, 103, 3);
 }
@@ -44,4 +54,85 @@
 }
 .draw:active {
   background-color: rgb(194, 102, 11);
+}
+
+.canvas {
+  background-color: #fff;
+}
+
+.input {
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  padding: 0.7rem;
+  resize: none;
+
+  outline: none;
+  border: none;
+  border: 1px;
+  box-shadow: 1px 1px 7px gainsboro;
+  border-radius: 0.2rem;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  padding: 0.3rem;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.orange {
+  padding: 0.3rem;
+  border: none;
+  background-color: #ffaf00;
+  color: #fff;
+}
+
+.yellow {
+  padding: 0.3rem;
+  border: none;
+  background-color: #ffff00;
+  color: #fff;
+}
+
+.green {
+  padding: 0.3rem;
+  border: none;
+  background-color: #00ff00;
+  color: #fff;
+}
+
+.blue {
+  padding: 0.3rem;
+  border: none;
+  background-color: #0000ff;
+  color: #fff;
+}
+
+.puple {
+  padding: 0.3rem;
+  border: none;
+  background-color: #9900ff;
+  color: #fff;
+}
+
+.white {
+  padding: 0.3rem;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.black {
+  padding: 0.3rem;
+  border: none;
+  background-color: #000000;
+  color: #fff;
 }
