@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../img/moomin_logo.png";
+import { GiHamburgerMenu } from 'react-icons/gi' 
 import classes from "./Nav.module.css";
 
 const Nav = () => {
@@ -24,7 +25,7 @@ const Nav = () => {
       </div>
       <div>
         <Link to='/menu'>
-        <p>menu</p>
+        <GiHamburgerMenu />
         </Link>
       </div>
     </section>

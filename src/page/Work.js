@@ -4,24 +4,31 @@ import { Link } from "react-router-dom";
 import classes from "./Work.module.css";
 
 import List from "../components/List";
+import Button from "../components/UI/Button";
 
 const Work = ({ data, onChangeSearch, search }) => {
-
   return (
     <div className={classes.main}>
-      <div className={classes.backButton}>
+      <div className={classes.title}>
+        <p>Case Study</p>
+        <form className={classes.inputDiv}>
+          <input
+            className={classes.input}
+            placeholder="search"
+            onChange={onChangeSearch}
+          ></input>
+        </form>
+      </div>
+      <div className={classes.content}>
         <p>Total {data.length}</p>
         <Link to="/newpost">
-          <button type="submit" className={classes.button}>
+          <Button type="submit" className={classes.button}>
             New Post
-          </button>
+          </Button>
         </Link>
-      </div>
-      <form className={classes.inputDiv} >
-        <input className={classes.input} placeholder="search" onChange={onChangeSearch} ></input>
-      </form>
-      <div className={classes.body}>
-        <List data={data} search={search} />
+        <div className={classes.body}>
+          <List data={data} search={search} />
+        </div>
       </div>
     </div>
   );

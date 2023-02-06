@@ -39,11 +39,18 @@ a {
 .ck.ck-reset_all,
 .ck-editor__main {
   width: 100% !important;
+
+}
+
+.ck {
+  border: none !important;
+  /* border: 1px solid black !important;   */
+
 }
 
 .ck-editor {
+  width: 100% !important;
   height: 55% !important;
-  width: 99% !important;
 
 }
 
@@ -52,20 +59,9 @@ a {
   height: 100% !important;
 }
 
-.ck-editor {
-  border: none;
-}
-
-/* ck ck-toolbar ck-toolbar_grouping */
-
-.cke_contents{  
-  border: none !important;  
-  border-radius: 0.2rem;
-}
-
 .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {  
-  border: none !important;  
-  border-radius: 0.2rem;
+  border: 1px solid black !important;  
+  outline: none !important;
 } 
 
 
