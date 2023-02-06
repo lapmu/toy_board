@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import GuestItem from "../components/GuestItem";
 import classes from "./Guest.module.css";
 
 // guest 페이지
@@ -17,16 +17,7 @@ const Guest = ({ Guest }) => {
       <div className={classes.dataGuest}>
         {/* 방명록 뿌리기 */}
         {Guest.map((el, idx) => {
-          return (
-            <div key={idx} className={classes.content}>
-              <div className={classes.content_author}>{el.author}</div>
-              {el.img === "none" ? (
-                <div className={classes.content_text}>{el.text}</div>
-              ) : (
-                <img src={el.img} className={classes.content_img}></img>
-              )}
-            </div>
-          );
+          return <GuestItem key={idx} el={el}></GuestItem>;
         })}
       </div>
     </div>
