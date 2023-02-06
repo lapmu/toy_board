@@ -68,6 +68,13 @@ function App() {
     setData(e.target.value);
   };
 
+  const onRemoveGuest = (idx) => {
+    const newData = { ...data };
+    const filtered = newData.guest.filter((el, indx) => indx !== idx);
+    newData.guest = filtered;
+    setData(newData);
+  };
+
   return (
     <BrowserRouter>
       <div className={classes.main}>
@@ -92,7 +99,12 @@ function App() {
                   }
                 />
                 <Route path="/newpost" element={<NewPost onPost={onPost} />} />
-                <Route path="/guest" element={<Guest Guest={data.guest} />} />
+                <Route
+                  path="/guest"
+                  element={
+                    <Guest Guest={data.guest} onRemoveGuest={onRemoveGuest} />
+                  }
+                />
                 <Route path="/write" element={<Write onWrite={onWrite} />} />
                 <Route path="/draw" element={<Draw onDraw={onDraw} />} />
                 {data.post.map((el, idx) => {

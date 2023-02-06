@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import classes from "./GuestItem.module.css";
 
-const GuestItem = ({ el }) => {
+const GuestItem = ({ el, idx, onRemoveGuest }) => {
   const [modal, setModal] = useState(false);
 
   const modalHandle = () => {
+    setModal(!modal);
+  };
+
+  const deleteGuestHandle = () => {
+    onRemoveGuest(idx);
     setModal(!modal);
   };
   return (
@@ -12,8 +17,11 @@ const GuestItem = ({ el }) => {
       {modal ? (
         <div className={classes.modal}>
           <div className={classes.modal_body}>
-            <div className={classes.modal_close} onClick={modalHandle}>
-              🗙
+            <div className={classes.modal_header}>
+              <div onClick={deleteGuestHandle}>🗑</div>
+              <div className={classes.modal_close} onClick={modalHandle}>
+                🗙
+              </div>
             </div>
             {el.img === "none" ? (
               <div className={classes.modal_text}>{el.text}</div>
