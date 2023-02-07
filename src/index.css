@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #ECEDF2;
+  background-color: #ecedf2;
   margin: 0;
   font-family: "SUIT-Regular";
   position: fixed;
@@ -33,25 +33,22 @@ code {
 
 a {
   text-decoration: none;
-  text-decoration-line: none;    
+  text-decoration-line: none;
 }
 
 .ck.ck-reset_all,
 .ck-editor__main {
   width: 100% !important;
-
 }
 
 .ck {
   border: none !important;
   /* border: 1px solid black !important;   */
-
 }
 
 .ck-editor {
   width: 100% !important;
   height: 72% !important;
-
 }
 
 .ck-editor__main,
@@ -59,15 +56,10 @@ a {
   height: 100% !important;
 }
 
-.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {  
-  border: 1px solid black !important;  
+.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+  border: 1px solid black !important;
   outline: none !important;
-} 
-
-
-
-
-
+}
 
 /* outline: none;
 border: none;

@@ -17,7 +17,7 @@ const Draw = ({ onDraw }) => {
   useEffect(() => {
     // canvas useRef
     const canvas = canvasRef.current;
-    canvas.width = 1000;
+    canvas.width = 1500;
     canvas.height = 350;
     const ctx = canvas.getContext("2d");
     ctx.lineJoin = "round";
