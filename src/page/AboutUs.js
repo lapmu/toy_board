@@ -1,16 +1,15 @@
 import React from "react";
 
-import Button from "../components/UI/Button";
-import BackSpace from '../components/UI/BackSpace'
+import classes from './AboutUs.module.css'
 
 const AboutUs = () => {
   return (
     <div>
-        <div>
-        About Us 
-        </div>
-        <Button>New</Button>
-        <BackSpace to='/work'/>
+      <div className={classes.head}></div>
+        <h1>
+        MMZ
+        </h1>
+        MooMin's
     </div>
   );
 };

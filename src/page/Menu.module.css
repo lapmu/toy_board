@@ -30,28 +30,33 @@
     justify-content: center;
  
     margin-right: 1rem;
-    
-}
-.moo > h1 {
-    /* color: rgb(234, 132, 29) */
+    transition: all 0.3s;
 }
 .moo > p,
 .moo > a,
 .moo > span {
     margin-top: 1rem;
     color: #5c5c5c;
+    transition: all 0.3s;
 }
-
+.moo h1:hover {
+    color: white;
+    transition: all 0.3s;
+}
+.moo > p:hover,
+.moo > a:hover,
+.moo > span:hover {
+    color: white;
+    transition: all 0.3s;
+    text-decoration: underline;
+}
 
 .min {
     flex: 1 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-}
-.min > h1 {
-    /* color: rgb(3, 103, 3); */
+    transition: all 0.3s;
 }
 .min > p,
 .min > a,
@@ -59,6 +64,18 @@
 {
     margin-top: 1rem;
     color: #5c5c5c;
+    transition: all 0.3s;
+}
+.min h1:hover {
+    color: white;
+    transition: all 0.3s;
+}
+.min > p:hover,
+.min > a:hover,
+.min > span:hover {
+    color: white;
+    transition: all 0.3s;
+    text-decoration: underline;
 }
 
 
@@ -74,5 +91,13 @@
     font-size: 3rem;
     font-weight: 800;
     margin: 1.5rem 0rem;
+
+    transition: all 0.3s;
+}
+.board p:hover {
+    color: white;
+    text-decoration: underline;
+
+    transition: all 0.3s;
 }
 
