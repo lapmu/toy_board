@@ -29,6 +29,8 @@ function App() {
   const [search, setSearch] = useState("");
   const [selectedPost, setSelectedPost] = useState(null);
   const [isweather, setWeather] = useState("Clear");
+  // bg on/off
+  const [background, setBackground] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -97,31 +99,41 @@ function App() {
     setData(newData);
   };
 
+  // bg on/off handler
+  const onBackgroundHandler = () => {
+    setBackground((prev) => !prev);
+  };
+
   return (
     <BrowserRouter>
-      <div className={classes.background}>
-        <img
-          src={
-            isweather === "Clear"
-              ? Clear
-              : isweather === "Clouds"
-              ? Clouds
-              : isweather === "Drizzle"
-              ? Drizzle
-              : isweather === "Rain"
-              ? Rain
-              : isweather === "Snow"
-              ? Snow
-              : isweather === "Thunderstorm"
-              ? Thunderstorm
-              : Mist
-          }
-          alt={isweather}
-        />
-      </div>
+      {background ? (
+        <div className={classes.background}>
+          <img
+            src={
+              isweather === "Clear"
+                ? Clear
+                : isweather === "Clouds"
+                ? Clouds
+                : isweather === "Drizzle"
+                ? Drizzle
+                : isweather === "Rain"
+                ? Rain
+                : isweather === "Snow"
+                ? Snow
+                : isweather === "Thunderstorm"
+                ? Thunderstorm
+                : Mist
+            }
+            alt={isweather}
+          />
+        </div>
+      ) : (
+        <div className={classes.backgroundColor}></div>
+      )}
+
       <div className={classes.main}>
         <div className={classes.header}>
-          <Nav />
+          <Nav onBackgroundHandler={onBackgroundHandler} />
         </div>
         <div className={classes.body}>
           <div className={classes.content}>
