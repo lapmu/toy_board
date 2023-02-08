@@ -78,30 +78,34 @@
   opacity: 0;
   transition: all 0.5s;
 }
+.moo_img:hover {
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
 .moo_img:hover .moo_text {
-    background-color: rgba(0, 0, 0, 0.750);
-    opacity: 1;
-    transition: all 0.5s;
-  }
-  .moo_text > h1 {
-    color: white;
-  
-    margin-bottom: 2rem;
-  }
-  .moo_text > p {
-    color: white;
-  }
-  .moo_text > ul {
-    padding-left: 1rem;
-  }
-  .moo_text ul li {
-    color: white;
-    margin-top: 0.7rem;
-  }
-  .moo_text ul ul {
-    padding-left: 1rem;
-  }
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+  transition: all 0.5s;
+  filter: grayscale(100%);
+}
+.moo_text > h1 {
+  color: white;
 
+  margin-bottom: 2rem;
+}
+.moo_text > p {
+  color: white;
+}
+.moo_text > ul {
+  padding-left: 1rem;
+}
+.moo_text ul li {
+  color: white;
+  margin-top: 0.7rem;
+}
+.moo_text ul ul {
+  padding-left: 1rem;
+}
 
 .min_img {
   display: flex;
@@ -131,10 +135,15 @@
   opacity: 0;
   transition: all 0.5s;
 }
+.min_img:hover {
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
 .min_img:hover .min_text {
-  background-color: rgba(0, 0, 0, 0.750);
+  background-color: rgba(0, 0, 0, 0.75);
   opacity: 1;
   transition: all 0.5s;
+  filter: grayscale(100%);
 }
 .min_text > h1 {
   color: white;
@@ -154,8 +163,6 @@
 .min_text ul ul {
   padding-left: 1rem;
 }
-
-
 
 .moo {
   width: 100%;

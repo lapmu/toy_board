@@ -35,7 +35,6 @@
 }
 
 .body {
-  display: flex;
   align-items: center;
   min-height: 4rem;
   line-height: 1.5rem;
