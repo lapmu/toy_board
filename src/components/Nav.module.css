@@ -5,6 +5,11 @@
   padding: 1rem 0rem;
 }
 
+.p {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+
 .content {
   /* font-family: "Unbounded", cursive; */
   display: flex;
