@@ -15,13 +15,21 @@ const dummyData = {
     {
       id: 10,
       title: "아첨복 나 대신 해 줄 사람",
-      body: `Dolore ipsum amet qui ullamco nulla do. Excepteur eiusmod ea esse veniam dolor cillum anim labore nostrud dolor laborum incididunt. Ullamco voluptate Lorem incididunt aliquip laborum enim deserunt. Magna fugiat do est aliquip. Labore magna non cupidatat ipsum anim voluptate elit deserunt tempor magna eiusmod fugiat mollit. Mollit consequat eiusmod fugiat fugiat. Et mollit consequat id irure ut nulla proident enim. Nulla nostrud ea occaecat culpa aute labore tempor cupidatat labore fugiat ad. Excepteur veniam et aute id.
+      body: `Dolore ipsum amet qui ullamco nulla do. Excepteur eiusmod ea esse veniam dolor cillum anim labore nostrud dolor laborum incididunt. Ullamco voluptate Lorem incididunt aliquip laborum enim deserunt. Magna fugiat do est aliquip. Labore magna non cupidatat ipsum anim voluptate elit deserunt tempor magna eiusmod fugiat mollit. Mollit consequat eiusmod fugiat fugiat. Et mollit consequat id irure ut nulla proident enim. Nulla nostrud ea occaecat culpa aute labore tempor cupidatat labore fugiat ad. Excepteur veniam et aute id. <br><br>
       
-      Esse duis ullamco incididunt nisi laboris do aute magna ad fugiat. Enim dolor cupidatat duis et aliquip laborum ipsum est aliqua laboris est. Est ex elit elit occaecat enim laboris eu consequat consequat cillum ad. Consectetur eu consequat id velit do proident ut aute velit. Minim ipsum eiusmod quis consequat.
+      Esse duis ullamco incididunt nisi laboris do aute magna ad fugiat. Enim dolor cupidatat duis et aliquip laborum ipsum est aliqua laboris est. Est ex elit elit occaecat enim laboris eu consequat consequat cillum ad. Consectetur eu consequat id velit do proident ut aute velit. Minim ipsum eiusmod quis consequat. <br><br>
 
-      Ex ut Lorem esse veniam proident minim qui ea occaecat do. Aliqua laboris anim adipisicing et in aute sunt labore excepteur Lorem consectetur. Deserunt enim exercitation in anim veniam culpa ut culpa elit duis aliqua exercitation. Non esse ut est aute consequat enim aliquip. Nisi nisi elit dolor magna qui laboris minim excepteur exercitation est do enim cillum labore. Laboris excepteur in est sunt eu et esse excepteur quis Lorem sunt.
+      Ex ut Lorem esse veniam proident minim qui ea occaecat do. Aliqua laboris anim adipisicing et in aute sunt labore excepteur Lorem consectetur. Deserunt enim exercitation in anim veniam culpa ut culpa elit duis aliqua exercitation. Non esse ut est aute consequat enim aliquip. Nisi nisi elit dolor magna qui laboris minim excepteur exercitation est do enim cillum labore. Laboris excepteur in est sunt eu et esse excepteur quis Lorem sunt. <br><br>
 
-      Tempor aliquip ex aliquip eiusmod irure labore enim ipsum. Fugiat veniam quis amet labore ea irure eiusmod ex excepteur. Laboris veniam elit occaecat eiusmod Lorem aliqua labore mollit laborum aliquip ex occaecat.
+      Tempor aliquip ex aliquip eiusmod irure labore enim ipsum. Fugiat veniam quis amet labore ea irure eiusmod ex excepteur. Laboris veniam elit occaecat eiusmod Lorem aliqua labore mollit laborum aliquip ex occaecat.<br><br>
+
+      Dolore ipsum amet qui ullamco nulla do. Excepteur eiusmod ea esse veniam dolor cillum anim labore nostrud dolor laborum incididunt. Ullamco voluptate Lorem incididunt aliquip laborum enim deserunt. Magna fugiat do est aliquip. Labore magna non cupidatat ipsum anim voluptate elit deserunt tempor magna eiusmod fugiat mollit. Mollit consequat eiusmod fugiat fugiat. Et mollit consequat id irure ut nulla proident enim. Nulla nostrud ea occaecat culpa aute labore tempor cupidatat labore fugiat ad. Excepteur veniam et aute id. <br><br>
+      
+      Esse duis ullamco incididunt nisi laboris do aute magna ad fugiat. Enim dolor cupidatat duis et aliquip laborum ipsum est aliqua laboris est. Est ex elit elit occaecat enim laboris eu consequat consequat cillum ad. Consectetur eu consequat id velit do proident ut aute velit. Minim ipsum eiusmod quis consequat. <br><br>
+
+      Ex ut Lorem esse veniam proident minim qui ea occaecat do. Aliqua laboris anim adipisicing et in aute sunt labore excepteur Lorem consectetur. Deserunt enim exercitation in anim veniam culpa ut culpa elit duis aliqua exercitation. Non esse ut est aute consequat enim aliquip. Nisi nisi elit dolor magna qui laboris minim excepteur exercitation est do enim cillum labore. Laboris excepteur in est sunt eu et esse excepteur quis Lorem sunt. <br><br>
+
+      Tempor aliquip ex aliquip eiusmod irure labore enim ipsum. Fugiat veniam quis amet labore ea irure eiusmod ex excepteur. Laboris veniam elit occaecat eiusmod Lorem aliqua labore mollit laborum aliquip ex occaecat.<br><br>
       `,
       createAt: "2023. 1. 30.",
     },
