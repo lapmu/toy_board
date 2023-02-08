@@ -6,7 +6,7 @@
 }
 
 .p {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-size: 2rem;
 }
 
@@ -34,8 +34,4 @@
 
 .mainMenu {
   display: flex;
-}
-
-.menu {
-  color: #fff;
 }

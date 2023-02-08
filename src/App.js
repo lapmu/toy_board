@@ -154,7 +154,14 @@ function App() {
                     <Route
                       key={idx}
                       path={"/postitem" + idx}
-                      element={<PostItem idx={idx} data={el} onRemovePost={onRemovePost} selectedPost={selectedPost}/>}
+                      element={
+                        <PostItem
+                          idx={idx}
+                          data={el}
+                          onRemovePost={onRemovePost}
+                          selectedPost={selectedPost}
+                        />
+                      }
                     />
                   );
                 })}
