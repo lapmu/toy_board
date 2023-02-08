@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 
 import classes from "./Menu.module.css";
 
+import moo from "../img/zep_moo.png";
+import min from "../img/zep_min.png";
+
+
 const Menu = () => {
   return (
     <div className={classes.main}>
       <article className={classes.name}>
         <div className={classes.moo}>
+          <img src={moo} alt='moo' />
           <h1>Moo</h1>
           <a href="https://github.com/lapmu" target={"_blank"} rel="noreferrer">
             Github
@@ -29,6 +34,7 @@ const Menu = () => {
           <span>antjdgkdl@gmail.com</span>
         </div>
         <div className={classes.min}>
+        <img src={min} alt='moo' />
           <h1>Min</h1>
           <a
             href="https://github.com/dding-v/"

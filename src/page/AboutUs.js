@@ -1,7 +1,7 @@
 import React from "react";
 
-import moo from "../img/moo.png";
-import min from "../img/min.png";
+// import moo from "../img/real_moo.jpg";
+import min from "../img/real_min.jpg";
 
 import classes from "./AboutUs.module.css";
 
@@ -17,7 +17,7 @@ const AboutUs = () => {
 
       <section className={classes.section_2}>
         <div className={classes.moo_img}>
-          <img src={moo} alt="moo" className={classes.moo} />
+          <img src='' alt="moo" className={classes.moo} />
           <div className={classes.moo_text}>
             <h1>Moo</h1>
             <ul>
