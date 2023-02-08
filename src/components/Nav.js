@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <section className={classes.section}>
       <Link to="/">
-        <p>logo</p>
+        <p className={classes.p}>MMZ</p>
         {/* <img src={logo} alt="logo" className={classes.img} /> */}
       </Link>
       <div className={classes.mainMenu}>
