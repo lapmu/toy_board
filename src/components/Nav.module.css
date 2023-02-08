@@ -6,15 +6,14 @@
 }
 
 .p {
-  font-family: "Lobster", cursive;
+  font-family: 'Righteous', cursive;
+
   font-size: 2rem;
 }
 
 .content {
-  /* font-family: "Unbounded", cursive; */
   display: flex;
   align-items: center;
-
   margin: 0rem 1rem;
 
   font-size: 0.8rem;
@@ -35,3 +34,12 @@
 .mainMenu {
   display: flex;
 }
+
+.bg {
+  margin-right: 1rem;
+}
+
+.section a {
+  color: aqua;
+}
+

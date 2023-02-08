@@ -61,3 +61,16 @@
   height: 100%;
   object-fit: cover;
 }
+
+
+.backgroundColor {
+  background-color: rgb(211, 205, 190);
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  z-index: -999;
+  filter: blur(4px);
+  opacity: 0.5;
+}
