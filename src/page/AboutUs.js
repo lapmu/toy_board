@@ -22,23 +22,18 @@ const AboutUs = () => {
           <div className={classes.moo_text}>
             <h1>Moo</h1>
             <ul>
-              <li>Web CSS</li>
-              <li>Main Display</li>
-              <li>About Us</li>
+              <li>Background</li>
               <li>Case Study</li>
               <ul>
-                <li>work</li>
-                <li>filter</li>
-                <li>list</li>
+                <li>newpost</li>
               </ul>
-              <li>Cuest Book</li>
+              <li>Guest Book</li>
               <ul>
-                <li>write</li>
+                <li>guest</li>
+                <li>modal</li>
+                <li>draw</li>
+                <li>guestitem</li>
               </ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
             </ul>
           </div>
         </div>
