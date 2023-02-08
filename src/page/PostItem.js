@@ -33,12 +33,10 @@ const PostItem = ({ data, el, idx, onRemovePost, selectedPost }) => {
       <div className={classes.title}>{data.title}</div>
       <div className={classes.content}>
         <div>
-          <div className={classes.bodyDiv}>
-            <div
-              className={classes.body}
-              dangerouslySetInnerHTML={{ __html: data.body }}
-            />
-          </div>
+          <div
+            className={classes.body}
+            dangerouslySetInnerHTML={{ __html: data.body }}
+          />
 
           <div className={classes.createAt}>{data.createAt}</div>
         </div>
