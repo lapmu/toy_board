@@ -5,7 +5,7 @@ import classes from './Main.module.css'
 const Main = () => {
   return (
     <div className={classes.main}>
-        <div className={classes.title}>MMZ</div>
+        <div className={classes.title}>M&MZ</div>
         <div></div>
     </div>
   );

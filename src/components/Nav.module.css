@@ -7,8 +7,12 @@
 
 .p {
   font-family: 'Righteous', cursive;
-
   font-size: 2rem;
+  transition: all 0.3s;
+}
+.p:hover {
+  color: white;
+  transition: all 0.3s;
 }
 
 .content {
@@ -20,11 +24,11 @@
   font-weight: 800;
   letter-spacing: -0.02rem;
 
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .content:hover {
   color: white;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .img {
@@ -33,13 +37,15 @@
 
 .mainMenu {
   display: flex;
+  cursor: pointer;
 }
 
-.bg {
+.mainMenu svg {
   margin-right: 1rem;
+  transition: all 0.3s;
 }
-
-.section a {
-  color: aqua;
+.mainMenu svg:hover {
+  color: white;
+  transition: all 0.3s;
 }
 
