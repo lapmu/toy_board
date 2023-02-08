@@ -6,7 +6,6 @@
   width: 100%;
   height: 100%;
 
-  cursor: pointer;
 }
 
 .backspace {
@@ -17,6 +16,8 @@
 }
 
 .title {
+  cursor: default;
+
   display: flex;
   align-items: center;
   min-height: 4rem;
@@ -68,4 +69,5 @@
 
 .backsubmit {
   display: flex;
+  cursor: pointer;
 }

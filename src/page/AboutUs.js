@@ -12,7 +12,7 @@ const AboutUs = () => {
       <section className={classes.section_1}>
         <div className={classes.title}>
           <p>ㅡ About MOOMINZ</p>
-          <h1>MMZ</h1>
+          <h1>M&MZ</h1>
         </div>
       </section>
 

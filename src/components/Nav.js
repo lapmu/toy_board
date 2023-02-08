@@ -8,7 +8,7 @@ const Nav = ({ onBackgroundHandler }) => {
   return (
     <section className={classes.section}>
       <Link to="/">
-        <p className={classes.p}>MMZ</p>
+        <p className={classes.p}>MNMZ</p>
       </Link>
       <div className={classes.mainMenu}>
         <Link to="/aboutus">
@@ -23,10 +23,10 @@ const Nav = ({ onBackgroundHandler }) => {
       </div>
       <div className={classes.mainMenu}>
         <div>
-         <GiHearts onClick={onBackgroundHandler} className={classes.bg} />
+         <GiHearts onClick={onBackgroundHandler} />
         </div>
         <Link to="/menu">
-          <GiHamburgerMenu className={classes.menu} />
+          <GiHamburgerMenu />
         </Link>
       </div>
     </section>

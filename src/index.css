@@ -9,7 +9,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  color: #000000;
 }
 
 body {
@@ -32,6 +31,7 @@ code {
 }
 
 a {
+  color: #000000;
   text-decoration: none;
   text-decoration-line: none;
 }
@@ -66,3 +66,4 @@ border: none;
 border: 1px;
 box-shadow: 1px 1px 7px gainsboro;
 border-radius: 0.2rem; */
+
