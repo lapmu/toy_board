@@ -1,26 +1,36 @@
 .section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
 }
 
 .content {
-    /* font-family: "Unbounded", cursive; */
-    display: flex;
-    align-items: center;
+  /* font-family: "Unbounded", cursive; */
+  display: flex;
+  align-items: center;
 
-    margin: 0rem 1rem;
+  margin: 0rem 1rem;
 
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: -0.02rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02rem;
+
+  transition: all 0.2s;
+}
+.content:hover {
+  color: white;
+  transition: all 0.2s;
 }
 
 .img {
-    max-width: 6rem;
+  max-width: 6rem;
 }
 
 .mainMenu {
-    display: flex;
+  display: flex;
+}
+
+svg {
+  color: red;
 }
