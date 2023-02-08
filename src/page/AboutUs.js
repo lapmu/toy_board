@@ -27,13 +27,13 @@ const AboutUs = () => {
               <li>Case Study</li>
               <ul>
                 <li>work</li>
+                <li>filter</li>
                 <li>list</li>
               </ul>
               <li>Cuest Book</li>
               <ul>
                 <li>write</li>
               </ul>
-
               <li></li>
               <li></li>
               <li></li>
@@ -47,23 +47,22 @@ const AboutUs = () => {
           <div className={classes.min_text}>
             <h1>Min</h1>
             <ul>
-              <li>Web CSS</li>
-              <li>Main Display</li>
+              <li>Main</li>
+              <li>Nav</li>
               <li>About Us</li>
               <li>Case Study</li>
               <ul>
                 <li>work</li>
+                <li>filter</li>
                 <li>list</li>
+                <li>postitem</li>
               </ul>
-              <li>Cuest Book</li>
+              <li>Guest Book</li>
               <ul>
                 <li>write</li>
               </ul>
-
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Menu</li>
+              <li>Web CSS</li>
             </ul>
           </div>
         </div>

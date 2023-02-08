@@ -15,13 +15,282 @@ const dummyData = {
     {
       id: 10,
       title: "아첨복 나 대신 해 줄 사람",
-      body: "구인(0/100)",
+      body: `
+
+      1. 💬 JSX
+      1.1. 📂 JSX란
+      JSX는 JavaScript가 확장된 문법
+      
+      그러나 브라우저가 바로 실행할 수 있는 JavaScript 코드가 아니다
+      브라우저가 이해할 수 있는 JavaScript 코드로 변환 해줘야 한다
+      이때 이용하는 것이 Babel
+      
+      
+      Babel은 JSX를 브라우저가 이해할 수 있는 JavaScript로 컴파일한다
+      
+      컴파일 후, JavaScript를 브라우저가 읽고 화면에 렌더링할 수 있다
+      
+      
+      
+      
+      
+      1.1.1. 🔗 DOM 그리고 React JSX
+      
+      React에서는 DOM과 다르게 CSS, JSX 문법만을 가지고 웹 애플리케이션을 개발할 수 있다
+      
+      컴포넌트 하나를 구현하기 위해서 필요한 파일이 줄어들었고, 한눈에 컴포넌트를 확인할 수 있게 되었다
+      JSX를 사용하면 JavaScript 만으로 마크업(markup) 형태의 코드를 작성하여 DOM에 배치할 수 있게 된다
+      주의할 점! JSX는 HTML처럼 생겼지만, HTML이 아니기 때문에 앞서 언급했던 “Babel”을 이용한 컴파일 과정이 필요하다
+      
+      
+      
+      
+      1.1.2. 🔗 왜 JSX를 써야 할까?
+      
+      DOM에서 JavaScript와 함께 사용하기 위해서는 JavaScript와 HTML을 연결하기 위한 작업이 필요
+      
+      Inline 방식이나 script 태그를 이용하여 외부 JavaScript 파일을 연결할 수도 있다
+      
+      
+      
+      React에서는 JSX를 이용해서 앞서 보았던 DOM 코드보다 명시적으로 코드를 작성할 수 있다
+      
+      JavaScript 문법과 HTML 문법을 동시에 이용해, 기능과 구조를 한눈에 확인
+      이렇게 구조와 동작에 대한 코드를 한 뭉치로 적은 코드셋을 컴포넌트라고 한다
+      
+      
+      
+      
+      
+      1.1.3. 🔗 JSX 없이 React를 쓸 수 있을까?
+      
+      JSX 없이는 React 요소를 만들 수 없는 걸까?
+      
+      JSX 없이도 React 요소를 만들 수 있다
+      다만 코드가 복잡하고, 가독성이 떨어지는 단점이 있다
+      
+      
+      
+      JSX를 사용함으로써 코드를 이해하기 쉬워진다
+      
+      Babel이 알아서 JSX 코드를 변환해 주니 편리하게 이용 가능
+      
+      
+      
+      
+      1.1.4. 🔗 JSX 규칙
+      
+      하나의 엘리먼트 안에 모든 엘리먼트가 포함
+      JSX에서 여러 엘리먼트를 작성하고자 하는 경우, 최상위에서 opening tag와 closing tag
+      로 감싸주어야 한다
+      
+      
+      
+      
+      
+      
+      엘리먼트 클래스 사용 시, className으로 표기
+      React에서 CSS class 속성을 지정하려면 className으로 표기
+      
+      class로 작성하게 된다면 React에서는 이를 html 클래스 속성 대신 자바스크립트 클래스로 받아들이기 때문에 주의해야 한다
+      
+      
+      
+      
+      
+      
+      JavaScript 표현식 사용 시, 중괄호({}) 이용
+      중괄호를 사용하지 않으면 일반 텍스트로 인식
+      
+      
+      
+      
+      
+      
+      사용자 정의 컴포넌트는 대문자로 시작 (PascalCase)
+      소문자로 시작하게 되면 일반적인 HTML 엘리먼트로 인식
+      
+      대문자로 작성된 JSX 컴포넌트를 따로 사용자 정의 컴포넌트라고 함
+      
+      
+      
+      
+      
+      
+      조건부 렌더링에는 삼항연산자 사용
+      조건부 렌더링은 if문이 아닌 삼항연산자를 이용
+      
+      
+      
+      
+      
+      
+      여러 개의 HTML 엘리먼트를 표시할 때, map() 함수를 이용
+      map 함수를 사용할 때 반드시 "key" JSX 속성을 넣어야 한다
+      "key" JSX 속성을 넣지 않으면 리스트의 각 항목에 key 넣어야 한다는 경고 뜸
+      
+      
+      
+      
+      
+      1.2. 📂 map을 이용한 반복
+      직접 모든 데이터를 코드에 작성하는 것을 하드코딩(hard coding)이라 부른다
+      
+      
+      
+      누군가의 블로그 포스트가 두 개밖에 없다면 아래 코드로도 충분하다
+      
+      const posts = [
+        { id: 1, title: "Hello World", content: "Welcome to learning React!" },
+        { id: 2, title: "Installation", content: "You can install React via npm." },
+      ];
+      
+      function Blog() {
+        return (
+          <div>
+            <div>
+              <h3>{posts[0].title}</h3>
+              <p>{posts[0].content}</p>
+            </div>
+            <div>
+              <h3>{posts[1].title}</h3>
+              <p>{posts[1].content}</p>
+            </div>
+          </div>
+        );
+      }
+      
+      
+      그러나 블로그 포스트가 100개인 경우엔 어떨까
+      
+      블로그 포스트가 매일 늘어난다면 매일 코드를 변경해 주어야 하는데, 알아서 렌더링 할 수는 없을까?
+      
+      React는 이런 문제를 해결하기 위해 배열 메서드 map을 활용한다
+      
+      const posts = [
+          { id : 1, title : 'Hello World', content : 'Welcome to learning React!' },
+          { id : 2, title : 'Installation', content : 'You can install React via npm.' },
+          { id : 3, title : 'reusable component', content : 'render easy with reusable component.' },
+          // ...
+          { id : 100, title : 'I just got hired!', content : 'OMG!' },
+        ];
+      
+      function Blog() {
+        return (
+          <div>
+            <div>
+               <h3>{posts[0].title}</h3>
+               <p>{posts[0].content}</p>
+           </div>
+            <div>
+               <h3>{posts[1].title}</h3>
+               <p>{posts[1].content}</p>
+            </div>
+            {// ...}
+            <div>
+               <h3>{posts[99].title}</h3>
+               <p>{posts[99].content}</p>
+            </div>
+           {// ... 98 * 4 more lines !!}
+         </div>
+        );
+      }
+      
+      
+      
+      
+      1.2.1. 🔗 map을 이용한 반복
+      현재 posts의 요소는 블로그 포스트의 id, title, content로 나눌 수 있다
+      
+      이 정보를 브라우저에서 React로 보여주려면 JSX를 활용해서 이 데이터를 적절히 넣어야 한다
+      
+      문자열에 불과한 posts의 요소를 HTML 엘리먼트로, 이 정보의 구조를 잘 짜 놓은 모습으로 매핑해야 한다
+      
+      단순 반복되는 코드를 간결하게 작성할 수 있다
+      
+      function Blog() {
+        const postToElement = (post) => (
+          <div>
+            <h3>{post.title}</h3>
+            <p>{post.content}</p>
+          </div>
+        );
+      
+        const blogs = posts.map(postToElement);
+      
+        return <div className="post-wrapper">{blogs}</div>;
+      }
+      
+      
+      
+      
+      key 속성
+      
+      React에서 map 메서드 사용 시, key 속성 을 넣지 않으면 아래와 같이 리스트의 각 항목에 key를 넣어야 한다는 경고가 표시된다 key 속성의 위치는 map 메서드 내부에 있는 첫 번째 엘리먼트에 넣으면 된다
+      
+      
+      key 속성값이 반드시 id가 되어야 하나요? id가 존재하지 않으면 어떻게 해야 하나요? key 속성값은 가능하면 데이터에서 제공하는 id를 할당해야 합니다. key 속성값은 id와 마찬가지로 변하지 않고, 예상 가능하며, 유일해야 하기 때문입니다. 정 고유한 id가 없는 경우에만 배열 인덱스를 넣어서 해결할 수 있습니다. 배열 인덱스는 최후의 수단(as a last resort)으로만 사용합니다.
+      function Blog() {
+        // postToElement라는 함수로 나누지 않고 아래와 같이 써도 무방합니다.
+        const blogs = posts.map((post) => (
+          <div key={post.id}>
+            <h3>{post.title}</h3>
+            <p>{post.content}</p>
+          </div>
+        ));
+        return <div className="post-wrapper">{blogs}</div>;
+      }
+      
+      
+      
+      
+      1.3. 📂 Component
+      컴포넌트가 무엇인가?
+      
+      하나의 기능 구현을 위한 여러 종류의 코드 묶음이다
+      UI를 구성하는 필수 요소이다
+      컴포넌트는 리액트의 심장이다
+      const Component = () => {
+      return (
+        <>
+          <div>{정의 1}</div>
+          <div>{정의 2}</div>
+        </>
+      )
+      
+      
+      
+      
+      
+      리액트를 이용하면
+      
+      각자 독립적인 기능을 가진다
+      UI의 한 부분을 담당하기도 하는 컴포넌트를 여러 개 만들고 조합하여 애플리케이션을 만들 수 있다
+      
+      
+      
+      
+      
+      모든 리액트 애플리케이션은 최소 한 개의 컴포넌트를 가지고 있다
+      
+      이 컴포넌트는 애플리케이션 내부적으로는 근원(root)이 되는 역할을 한다
+      
+      이 최상위 컴포넌트는 근원의 역할을 하므로 다른 자식 컴포넌트를 가질 수 있다
+      
+      이 계층적 구조(hierarchy)를 트리 구조로 형상화할 수 있습니다.`,
       createAt: "2023. 1. 31.",
     },
     {
       id: 9,
       title: "언더바 과제보다 리액트가 재미있다",
-      body: "그것이 현생이니까",
+      body: `The act of clicking around a multipage website can become monotonous over time. Adding page transition effects to the mix can help to kick things up a notch.
+
+      They’re great for keeping the user’s interest as new content loads while maintaining a minimal impact on performance.
+      
+      With that in mind, here are 10 examples of page transitions that can add a little something special to your next project:
+      
+      Vue.js Variety by Tim Rijkse
+With the help of the Vue.js framework, the examples here sport a quick and slick set of transitions. There’s a nice mix here of basic transitions (fade, zoom) and a few that are a bit unique compared to what we normally see (flipX, flipY and slideUp).`,
       createAt: "2023. 1. 30.",
     },
     {
