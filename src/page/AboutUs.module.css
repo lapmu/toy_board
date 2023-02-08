@@ -5,13 +5,15 @@
   align-items: center;
   width: 100%;
   height: 100%;
+
+  position: relative;
 }
 
 .section_1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 3 0 0;
+  flex: 2 0 0;
 
   width: 100%;
   height: 100%;
@@ -20,18 +22,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 7 0 0;
+  flex: 8 0 0;
 
   width: 100%;
   height: 100%;
-  /* position: relative; */
+  padding: 3rem 0rem;
+
+  position: relative;
 }
 
 .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
 
   width: 100%;
   height: 100%;
@@ -40,6 +43,7 @@
   font-size: 3.5rem;
 }
 .title > p {
+  margin-top: 4rem;
   margin-bottom: 1rem;
 
   font-size: 0.9rem;
@@ -54,6 +58,8 @@
   width: 100%;
   height: 100%;
 
+  transition: all 0.5s;
+
   position: relative;
 }
 .moo_text {
@@ -65,23 +71,37 @@
   width: 100%;
   height: 100%;
 
-  /* position: absolute; */
-  transition: all ease 0.5s;
-}
-.moo_text > h1,
-.moo_text > p {
-  color: white;
-  z-index: 999;
-}
-/* .moo_img:hover + .moo_text  {
-    display: block;
-    background-color: aqua;
-    transition: all ease 0.5s;
-} */
+  font-size: 0.8rem;
 
-/* .mooMain_img:hover + .mooMain_text {
-    display: block;
-} */
+  position: absolute;
+
+  opacity: 0;
+  transition: all 0.5s;
+}
+.moo_img:hover .moo_text {
+    background-color: rgba(0, 0, 0, 0.750);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .moo_text > h1 {
+    color: white;
+  
+    margin-bottom: 2rem;
+  }
+  .moo_text > p {
+    color: white;
+  }
+  .moo_text > ul {
+    padding-left: 1rem;
+  }
+  .moo_text ul li {
+    color: white;
+    margin-top: 0.7rem;
+  }
+  .moo_text ul ul {
+    padding-left: 1rem;
+  }
+
 
 .min_img {
   display: flex;
@@ -92,17 +112,58 @@
   /* background-color: #fff; */
   width: 100%;
   height: 100%;
+
+  position: relative;
 }
 .min_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 0.8rem;
+
+  position: absolute;
+
+  opacity: 0;
+  transition: all 0.5s;
+}
+.min_img:hover .min_text {
+  background-color: rgba(0, 0, 0, 0.750);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.min_text > h1 {
+  color: white;
+
+  margin-bottom: 2rem;
+}
+.min_text > p {
+  color: white;
+}
+.min_text > ul {
+  padding-left: 1rem;
+}
+.min_text ul li {
+  color: white;
+  margin-top: 0.7rem;
+}
+.min_text ul ul {
+  padding-left: 1rem;
 }
 
+
+
 .moo {
-  width: 7rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .min {
-  width: 7rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

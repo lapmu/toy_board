@@ -9,14 +9,17 @@
   cursor: pointer;
 }
 
-.content {
+.backspace {
   margin-top: 3rem;
+}
+.content {
+  overflow: scroll;
 }
 
 .title {
   display: flex;
   align-items: center;
-  height: 4rem;
+  min-height: 4rem;
 
   background-color: rgb(4, 124, 16);
   padding: 1rem;
@@ -34,7 +37,8 @@
 .body {
   display: flex;
   align-items: center;
-  height: 4rem;
+  min-height: 4rem;
+  line-height: 1.5rem;
 
   background-color: white;
   padding: 1rem;

@@ -6,7 +6,7 @@ import classes from "./PostItem.module.css";
 import BackSpace from "../components/UI/BackSpace";
 import Button from "../components/UI/Button";
 
-const PostItem = ({ data, el, idx, onRemovePost, selectedPost  }) => {
+const PostItem = ({ data, el, idx, onRemovePost, selectedPost }) => {
   const navigate = useNavigate();
   const [value, setValue] = useState("");
 
@@ -14,12 +14,10 @@ const PostItem = ({ data, el, idx, onRemovePost, selectedPost  }) => {
     navigate("/work");
   };
 
-const deletePostHandle = () => {
-  onRemovePost(idx);
-  navigate('/work')
-};
-  
-
+  const deletePostHandle = () => {
+    onRemovePost(idx);
+    navigate("/work");
+  };
 
   useEffect(() => {
     if (selectedPost) {
@@ -29,15 +27,18 @@ const deletePostHandle = () => {
 
   return (
     <div className={classes.main}>
-      <div className={classes.content}>
+      <div className={classes.backspace}>
         <BackSpace to="/work" />
+      </div>
+      <div className={classes.title}>{data.title}</div>
+      <div className={classes.content}>
         <div>
-          <div className={classes.title}>{data.title}</div>
-
-          <div
-            className={classes.body}
-            dangerouslySetInnerHTML={{ __html: data.body }}
-          />
+          <div className={classes.bodyDiv}>
+            <div
+              className={classes.body}
+              dangerouslySetInnerHTML={{ __html: data.body }}
+            />
+          </div>
 
           <div className={classes.createAt}>{data.createAt}</div>
         </div>
@@ -46,11 +47,7 @@ const deletePostHandle = () => {
           <Button type="submit" value={value}>
             edit
           </Button>
-          <Button
-            type="submit"
-            value={value}
-            onClick={deletePostHandle}
-          >
+          <Button type="submit" value={value} onClick={deletePostHandle}>
             delete
           </Button>
         </div>
