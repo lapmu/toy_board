@@ -2,12 +2,15 @@ import React, { useRef, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BackSpace from "../components/UI/BackSpace";
 import Button from "../components/UI/Button";
+import { useDispatch } from "react-redux";
+import { addGuest_Draw } from "../action/action";
 
 import classes from "./Draw.module.css";
 
-const Draw = ({ onDraw }) => {
+const Draw = () => {
   const navigate = useNavigate();
   const canvasRef = useRef(null);
+  const dispatch = useDispatch();
   // getCtx
   const [getCtx, setGetCtx] = useState(null);
   // painting state
@@ -43,7 +46,7 @@ const Draw = ({ onDraw }) => {
   const buttonClickHandle = () => {
     if (name !== "") {
       const drawimg = canvasRef.current.toDataURL();
-      onDraw(name, drawimg);
+      dispatch(addGuest_Draw(name, drawimg));
       navigate("/guest");
     } else {
       alert("이름을 입력해 주세요.");

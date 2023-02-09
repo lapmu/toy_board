@@ -32,7 +32,7 @@
   height: 90%;
   overflow: auto;
 }
-.dataGuest::-webkit-scrollbar { 
+.dataGuest::-webkit-scrollbar {
   display: none; /* 스크롤 감추기 Chrome, Safari, Opera*/
 }
 
@@ -60,5 +60,4 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: end;
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import classes from "./List.module.css";
 
-const List = ({ data, search }) => {
+const List = ({ search }) => {
   // id, title, body
+  const state = useSelector((state) => state.post);
 
-  const filtered = data.filter((el) => {
+  const filtered = state.filter((el) => {
     return search.toLowerCase() === ""
       ? el
       : el.title.toLowerCase().includes(search);

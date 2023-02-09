@@ -1,51 +1,42 @@
-import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { deletePost } from "../action/action";
 
 import classes from "./PostItem.module.css";
 
 import BackSpace from "../components/UI/BackSpace";
 import Button from "../components/UI/Button";
 
-const PostItem = ({ data, el, idx, onRemovePost, selectedPost }) => {
+const PostItem = ({ idx }) => {
   const navigate = useNavigate();
-  const [value, setValue] = useState("");
+  const dispatch = useDispatch();
 
-  const onBackSpace = (e) => {
-    navigate("/work");
-  };
+  const state = useSelector((state) => state.post[idx]);
 
   const deletePostHandle = () => {
-    onRemovePost(idx);
+    dispatch(deletePost(idx));
     navigate("/work");
   };
-
-  useEffect(() => {
-    if (selectedPost) {
-      setValue(selectedPost.id);
-    }
-  }, [selectedPost]);
 
   return (
     <div className={classes.main}>
       <div className={classes.backspace}>
         <BackSpace to="/work" />
       </div>
-      <div className={classes.title}>{data.title}</div>
+      <div className={classes.title}>{state.title}</div>
       <div className={classes.content}>
         <div>
           <div
             className={classes.body}
-            dangerouslySetInnerHTML={{ __html: data.body }}
+            dangerouslySetInnerHTML={{ __html: state.body }}
           />
 
-          <div className={classes.createAt}>{data.createAt}</div>
+          <div className={classes.createAt}>{state.createAt}</div>
         </div>
 
         <div className={classes.backsubmit}>
-          <Button type="submit" value={value}>
-            edit
-          </Button>
-          <Button type="submit" value={value} onClick={deletePostHandle}>
+          <Button type="submit">edit</Button>
+          <Button type="submit" onClick={deletePostHandle}>
             delete
           </Button>
         </div>

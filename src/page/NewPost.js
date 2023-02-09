@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { useDispatch } from "react-redux";
+import { addPost } from "../action/action";
 
 import classes from "./NewPost.module.css";
 import Button from "../components/UI/Button";
 import BackSpace from "../components/UI/BackSpace";
 
-const NewPost = ({ onPost }) => {
+const NewPost = () => {
   const [isbody, setbody] = useState("");
   const [istitle, setTitle] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const titleChangeHandle = (e) => {
     setTitle(e.target.value);
@@ -20,13 +23,13 @@ const NewPost = ({ onPost }) => {
     if (isbody === "" || istitle === "") {
       alert("빈 칸을 작성해 주세요");
     } else {
-      onPost(isbody, istitle);
+      dispatch(addPost(isbody, istitle));
       navigate("/work");
     }
   };
   return (
     <div className={classes.newPost}>
-      <BackSpace to='/work' />
+      <BackSpace to="/work" />
       <div className={classes.newPost}>
         <input
           type="text"
@@ -42,9 +45,7 @@ const NewPost = ({ onPost }) => {
           }}
         />
       </div>
-      <Button onClick={buttonClickHandle}>
-        Submit
-      </Button>
+      <Button onClick={buttonClickHandle}>Submit</Button>
     </div>
   );
 };

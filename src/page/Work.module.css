@@ -8,16 +8,13 @@
   height: 90%;
 }
 
-
 .title {
   font-size: 2rem;
   font-weight: 800;
 
   display: flex;
   justify-content: space-between;
-  align-items: end;
 }
-
 
 .total {
   display: flex;
@@ -30,16 +27,14 @@
   font-size: 0.8rem;
 }
 
-
 .body {
   overflow: auto;
   width: 100%;
   height: 80%;
 }
-.body::-webkit-scrollbar { 
+.body::-webkit-scrollbar {
   display: none; /* 스크롤 감추기 Chrome, Safari, Opera*/
 }
-
 
 .inputDiv {
   display: flex;
@@ -56,5 +51,5 @@
   background: none;
   border: none;
   border-bottom: 1px solid rgb(0, 0, 0);
-  color:#000;
+  color: #000;
 }
