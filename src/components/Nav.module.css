@@ -6,26 +6,29 @@
 }
 
 .p {
-  font-family: "Lobster", cursive;
+  font-family: 'Righteous', cursive;
   font-size: 2rem;
+  transition: all 0.3s;
+}
+.p:hover {
+  color: white;
+  transition: all 0.3s;
 }
 
 .content {
-  /* font-family: "Unbounded", cursive; */
   display: flex;
   align-items: center;
-
   margin: 0rem 1rem;
 
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: -0.02rem;
 
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .content:hover {
   color: white;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .img {
@@ -34,4 +37,15 @@
 
 .mainMenu {
   display: flex;
+  cursor: pointer;
 }
+
+.mainMenu svg {
+  margin-right: 1rem;
+  transition: all 0.3s;
+}
+.mainMenu svg:hover {
+  color: white;
+  transition: all 0.3s;
+}
+

@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../img/moomin_logo.png";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiHearts } from "react-icons/gi";
 import classes from "./Nav.module.css";
 
-const Nav = () => {
+const Nav = ({ onBackgroundHandler }) => {
   return (
     <section className={classes.section}>
       <Link to="/">
-        <p className={classes.p}>MMZ</p>
-        {/* <img src={logo} alt="logo" className={classes.img} /> */}
+        <p className={classes.p}>MNMZ</p>
       </Link>
       <div className={classes.mainMenu}>
         <Link to="/aboutus">
@@ -23,9 +21,12 @@ const Nav = () => {
           <div className={classes.content}>Guest Book</div>
         </Link>
       </div>
-      <div>
+      <div className={classes.mainMenu}>
+        <div>
+         <GiHearts onClick={onBackgroundHandler} />
+        </div>
         <Link to="/menu">
-          <GiHamburgerMenu className={classes.menu} />
+          <GiHamburgerMenu />
         </Link>
       </div>
     </section>

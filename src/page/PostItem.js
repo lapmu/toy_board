@@ -18,6 +18,10 @@ const PostItem = ({ idx }) => {
     navigate("/work");
   };
 
+  const noEdit = (e) => {
+    alert("미완성. (--;)(__;)");
+  };
+
   return (
     <div className={classes.main}>
       <div className={classes.backspace}>
@@ -35,8 +39,10 @@ const PostItem = ({ idx }) => {
         </div>
 
         <div className={classes.backsubmit}>
-          <Button type="submit">edit</Button>
-          <Button type="submit" onClick={deletePostHandle}>
+          <Button type="submit" value={value} onClick={noEdit}>
+            edit
+          </Button>
+          <Button type="submit" value={value} onClick={deletePostHandle}>
             delete
           </Button>
         </div>

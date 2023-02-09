@@ -28,6 +28,8 @@ function App() {
   const [search, setSearch] = useState("");
   const [isweather, setWeather] = useState("Clear");
   const state = useSelector((state) => state);
+  // bg on/off
+  const [background, setBackground] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -42,31 +44,41 @@ function App() {
     setSearch(e.target.value);
   };
 
+  // bg on/off handler
+  const onBackgroundHandler = () => {
+    setBackground((prev) => !prev);
+  };
+
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div className={classes.background}>
-        <img
-          src={
-            isweather === "Clear"
-              ? Clear
-              : isweather === "Clouds"
-              ? Clouds
-              : isweather === "Drizzle"
-              ? Drizzle
-              : isweather === "Rain"
-              ? Rain
-              : isweather === "Snow"
-              ? Snow
-              : isweather === "Thunderstorm"
-              ? Thunderstorm
-              : Mist
-          }
-          alt={isweather}
-        />
-      </div>
+    <BrowserRouter>
+      {background ? (
+        <div className={classes.background}>
+          <img
+            src={
+              isweather === "Clear"
+                ? Clear
+                : isweather === "Clouds"
+                ? Clouds
+                : isweather === "Drizzle"
+                ? Drizzle
+                : isweather === "Rain"
+                ? Rain
+                : isweather === "Snow"
+                ? Snow
+                : isweather === "Thunderstorm"
+                ? Thunderstorm
+                : Mist
+            }
+            alt={isweather}
+          />
+        </div>
+      ) : (
+        <div className={classes.backgroundColor}></div>
+      )}
+
       <div className={classes.main}>
         <div className={classes.header}>
-          <Nav />
+          <Nav onBackgroundHandler={onBackgroundHandler} />
         </div>
         <div className={classes.body}>
           <div className={classes.content}>
