@@ -34,6 +34,7 @@ const AboutUs = () => {
                 <li>draw</li>
                 <li>guestitem</li>
               </ul>
+              <li>Redux</li>
             </ul>
           </div>
         </div>
