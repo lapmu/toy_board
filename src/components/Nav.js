@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import logo from '../img/mnmz_logo.png'
 import { GiHamburgerMenu, GiHearts } from "react-icons/gi";
 import classes from "./Nav.module.css";
 
@@ -8,7 +9,8 @@ const Nav = ({ onBackgroundHandler }) => {
   return (
     <section className={classes.section}>
       <Link to="/">
-        <p className={classes.p}>MNMZ</p>
+        {/* <p className={classes.p}>MNMZ</p> */}
+        <img src={logo} alt='logo' />
       </Link>
       <div className={classes.mainMenu}>
         <Link to="/aboutus">

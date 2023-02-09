@@ -5,6 +5,10 @@
   padding: 1rem 0rem;
 }
 
+.section img {
+  max-width: 3.5rem;
+}
+
 .p {
   font-family: 'Righteous', cursive;
   font-size: 2rem;
@@ -31,9 +35,7 @@
   transition: all 0.3s;
 }
 
-.img {
-  max-width: 6rem;
-}
+
 
 .mainMenu {
   display: flex;
