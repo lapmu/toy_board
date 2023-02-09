@@ -1,6 +1,5 @@
 import React from "react";
 
-// import moo from "../img/real_moo.jpg";
 import min from "../img/real_min.jpg";
 import moo from "../img/real_moo.jpg";
 
@@ -49,7 +48,6 @@ const AboutUs = () => {
               <li>About Us</li>
               <li>Case Study</li>
               <ul>
-                <li>work</li>
                 <li>filter</li>
                 <li>list</li>
                 <li>postitem</li>
