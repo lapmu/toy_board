@@ -39,10 +39,10 @@ const PostItem = ({ idx }) => {
         </div>
 
         <div className={classes.backsubmit}>
-          <Button type="submit" value={value} onClick={noEdit}>
+          <Button type="submit" onClick={noEdit}>
             edit
           </Button>
-          <Button type="submit" value={value} onClick={deletePostHandle}>
+          <Button type="submit" onClick={deletePostHandle}>
             delete
           </Button>
         </div>
