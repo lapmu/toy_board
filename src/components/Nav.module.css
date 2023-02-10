@@ -43,7 +43,7 @@
 }
 
 .mainMenu svg {
-  margin-right: 1rem;
+  margin-left: 1rem;
   transition: all 0.3s;
 }
 .mainMenu svg:hover {
