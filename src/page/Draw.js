@@ -108,25 +108,25 @@ const Draw = () => {
           {"Red"}
         </button>
         <button className={classes.orange} onClick={changeColor}>
-          {"orange"}
+          {"Orange"}
         </button>
         <button className={classes.yellow} onClick={changeColor}>
-          {"yellow"}
+          {"Yellow"}
         </button>
         <button className={classes.green} onClick={changeColor}>
-          {"green"}
+          {"Green"}
         </button>
         <button className={classes.blue} onClick={changeColor}>
-          {"blue"}
+          {"Blue"}
         </button>
         <button className={classes.puple} onClick={changeColor}>
-          {"puple"}
+          {"Puple"}
         </button>
         <button className={classes.white} onClick={changeColor}>
-          {"white"}
+          {"White"}
         </button>
         <button className={classes.black} onClick={changeColor}>
-          {"black"}
+          {"Black"}
         </button>
       </div>
       <Button className={classes.button} onClick={buttonClickHandle}>
