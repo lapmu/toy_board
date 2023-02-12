@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/toy_board/static/css/main.a5b46a31.css",
-    "main.js": "/toy_board/static/js/main.7c391662.js",
-    "static/css/103.af4d587c.chunk.css": "/toy_board/static/css/103.af4d587c.chunk.css",
-    "static/js/103.1341c37a.chunk.js": "/toy_board/static/js/103.1341c37a.chunk.js",
+    "main.css": "/toy_board/static/css/main.ca40c7e2.css",
+    "main.js": "/toy_board/static/js/main.a6af65a4.js",
+    "static/css/103.d2b4c600.chunk.css": "/toy_board/static/css/103.d2b4c600.chunk.css",
+    "static/js/103.260ade96.chunk.js": "/toy_board/static/js/103.260ade96.chunk.js",
     "static/css/27.1bdd200b.chunk.css": "/toy_board/static/css/27.1bdd200b.chunk.css",
     "static/js/27.927b5ea7.chunk.js": "/toy_board/static/js/27.927b5ea7.chunk.js",
     "static/css/323.a768c704.chunk.css": "/toy_board/static/css/323.a768c704.chunk.css",
@@ -17,7 +17,7 @@
     "static/css/352.810fd111.chunk.css": "/toy_board/static/css/352.810fd111.chunk.css",
     "static/js/352.e8023e62.chunk.js": "/toy_board/static/js/352.e8023e62.chunk.js",
     "static/css/658.216c7660.chunk.css": "/toy_board/static/css/658.216c7660.chunk.css",
-    "static/js/658.5d674308.chunk.js": "/toy_board/static/js/658.5d674308.chunk.js",
+    "static/js/658.6195d496.chunk.js": "/toy_board/static/js/658.6195d496.chunk.js",
     "static/js/703.986e604d.chunk.js": "/toy_board/static/js/703.986e604d.chunk.js",
     "static/js/213.fac6ae3d.chunk.js": "/toy_board/static/js/213.fac6ae3d.chunk.js",
     "static/media/real_min.jpg": "/toy_board/static/media/real_min.9e1ac178160121fcc2d5.jpg",
@@ -32,10 +32,10 @@
     "static/media/zep_moo.png": "/toy_board/static/media/zep_moo.df95851a545cbf939a4c.png",
     "static/media/zep_min.png": "/toy_board/static/media/zep_min.e25c5240160a116262e9.png",
     "index.html": "/toy_board/index.html",
-    "main.a5b46a31.css.map": "/toy_board/static/css/main.a5b46a31.css.map",
-    "main.7c391662.js.map": "/toy_board/static/js/main.7c391662.js.map",
-    "103.af4d587c.chunk.css.map": "/toy_board/static/css/103.af4d587c.chunk.css.map",
-    "103.1341c37a.chunk.js.map": "/toy_board/static/js/103.1341c37a.chunk.js.map",
+    "main.ca40c7e2.css.map": "/toy_board/static/css/main.ca40c7e2.css.map",
+    "main.a6af65a4.js.map": "/toy_board/static/js/main.a6af65a4.js.map",
+    "103.d2b4c600.chunk.css.map": "/toy_board/static/css/103.d2b4c600.chunk.css.map",
+    "103.260ade96.chunk.js.map": "/toy_board/static/js/103.260ade96.chunk.js.map",
     "27.1bdd200b.chunk.css.map": "/toy_board/static/css/27.1bdd200b.chunk.css.map",
     "27.927b5ea7.chunk.js.map": "/toy_board/static/js/27.927b5ea7.chunk.js.map",
     "323.a768c704.chunk.css.map": "/toy_board/static/css/323.a768c704.chunk.css.map",
@@ -49,12 +49,12 @@
     "352.810fd111.chunk.css.map": "/toy_board/static/css/352.810fd111.chunk.css.map",
     "352.e8023e62.chunk.js.map": "/toy_board/static/js/352.e8023e62.chunk.js.map",
     "658.216c7660.chunk.css.map": "/toy_board/static/css/658.216c7660.chunk.css.map",
-    "658.5d674308.chunk.js.map": "/toy_board/static/js/658.5d674308.chunk.js.map",
+    "658.6195d496.chunk.js.map": "/toy_board/static/js/658.6195d496.chunk.js.map",
     "703.986e604d.chunk.js.map": "/toy_board/static/js/703.986e604d.chunk.js.map",
     "213.fac6ae3d.chunk.js.map": "/toy_board/static/js/213.fac6ae3d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5b46a31.css",
-    "static/js/main.7c391662.js"
+    "static/css/main.ca40c7e2.css",
+    "static/js/main.a6af65a4.js"
   ]
 }
