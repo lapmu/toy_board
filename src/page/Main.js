@@ -22,13 +22,7 @@ const Main = () => {
     <div className={classes.main}>
       <div className={classes.title}>M&MZ</div>
       <div className={classes.title_2}>
-<<<<<<< HEAD
-        <span>
-          When you have faults, do not fear to abandon them. – Confucius
-        </span>
-=======
         <span>{arr[randomNum]}</span>
->>>>>>> 28b139a6983bf6380ead7e81b698d66edd34c536
       </div>
     </div>
   );
