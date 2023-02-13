@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/toy_board/static/css/main.ca40c7e2.css",
-    "main.js": "/toy_board/static/js/main.a6af65a4.js",
+    "main.js": "/toy_board/static/js/main.820d6324.js",
     "static/css/103.d2b4c600.chunk.css": "/toy_board/static/css/103.d2b4c600.chunk.css",
     "static/js/103.260ade96.chunk.js": "/toy_board/static/js/103.260ade96.chunk.js",
     "static/css/27.1bdd200b.chunk.css": "/toy_board/static/css/27.1bdd200b.chunk.css",
@@ -17,7 +17,7 @@
     "static/css/352.810fd111.chunk.css": "/toy_board/static/css/352.810fd111.chunk.css",
     "static/js/352.e8023e62.chunk.js": "/toy_board/static/js/352.e8023e62.chunk.js",
     "static/css/658.216c7660.chunk.css": "/toy_board/static/css/658.216c7660.chunk.css",
-    "static/js/658.6195d496.chunk.js": "/toy_board/static/js/658.6195d496.chunk.js",
+    "static/js/658.08c07729.chunk.js": "/toy_board/static/js/658.08c07729.chunk.js",
     "static/js/703.986e604d.chunk.js": "/toy_board/static/js/703.986e604d.chunk.js",
     "static/js/213.fac6ae3d.chunk.js": "/toy_board/static/js/213.fac6ae3d.chunk.js",
     "static/media/real_min.jpg": "/toy_board/static/media/real_min.9e1ac178160121fcc2d5.jpg",
@@ -33,7 +33,7 @@
     "static/media/zep_min.png": "/toy_board/static/media/zep_min.e25c5240160a116262e9.png",
     "index.html": "/toy_board/index.html",
     "main.ca40c7e2.css.map": "/toy_board/static/css/main.ca40c7e2.css.map",
-    "main.a6af65a4.js.map": "/toy_board/static/js/main.a6af65a4.js.map",
+    "main.820d6324.js.map": "/toy_board/static/js/main.820d6324.js.map",
     "103.d2b4c600.chunk.css.map": "/toy_board/static/css/103.d2b4c600.chunk.css.map",
     "103.260ade96.chunk.js.map": "/toy_board/static/js/103.260ade96.chunk.js.map",
     "27.1bdd200b.chunk.css.map": "/toy_board/static/css/27.1bdd200b.chunk.css.map",
@@ -49,12 +49,12 @@
     "352.810fd111.chunk.css.map": "/toy_board/static/css/352.810fd111.chunk.css.map",
     "352.e8023e62.chunk.js.map": "/toy_board/static/js/352.e8023e62.chunk.js.map",
     "658.216c7660.chunk.css.map": "/toy_board/static/css/658.216c7660.chunk.css.map",
-    "658.6195d496.chunk.js.map": "/toy_board/static/js/658.6195d496.chunk.js.map",
+    "658.08c07729.chunk.js.map": "/toy_board/static/js/658.08c07729.chunk.js.map",
     "703.986e604d.chunk.js.map": "/toy_board/static/js/703.986e604d.chunk.js.map",
     "213.fac6ae3d.chunk.js.map": "/toy_board/static/js/213.fac6ae3d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca40c7e2.css",
-    "static/js/main.a6af65a4.js"
+    "static/js/main.820d6324.js"
   ]
 }
