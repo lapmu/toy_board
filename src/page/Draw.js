@@ -56,19 +56,19 @@ const Draw = () => {
   const changeColor = (e) => {
     if (e.target.textContent === "Red") {
       getCtx.strokeStyle = "#e4491e";
-    } else if (e.target.textContent === "black") {
+    } else if (e.target.textContent === "Black") {
       getCtx.strokeStyle = "#000000";
-    } else if (e.target.textContent === "orange") {
+    } else if (e.target.textContent === "Orange") {
       getCtx.strokeStyle = "#fba818";
-    } else if (e.target.textContent === "yellow") {
+    } else if (e.target.textContent === "Yellow") {
       getCtx.strokeStyle = "#fce72b";
-    } else if (e.target.textContent === "green") {
+    } else if (e.target.textContent === "Green") {
       getCtx.strokeStyle = "#73d573";
-    } else if (e.target.textContent === "blue") {
+    } else if (e.target.textContent === "Blue") {
       getCtx.strokeStyle = "#48b0ff";
-    } else if (e.target.textContent === "puple") {
+    } else if (e.target.textContent === "Puple") {
       getCtx.strokeStyle = "#9768f6";
-    } else if (e.target.textContent === "white") {
+    } else if (e.target.textContent === "White") {
       getCtx.strokeStyle = "#ffffff";
     }
   };
