@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=6279bf02499d70eacd730c4b49f0e04b"
+      `https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then((data) => data.json())
       .then((data) => setWeather(data.weather[0].main));
@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {background ? (
         <div className={classes.background}>
           <img
