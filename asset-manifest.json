@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/toy_board/static/css/main.ca40c7e2.css",
-    "main.js": "/toy_board/static/js/main.72723419.js",
+    "main.js": "/toy_board/static/js/main.030ca001.js",
     "static/css/103.d2b4c600.chunk.css": "/toy_board/static/css/103.d2b4c600.chunk.css",
     "static/js/103.260ade96.chunk.js": "/toy_board/static/js/103.260ade96.chunk.js",
     "static/css/27.1bdd200b.chunk.css": "/toy_board/static/css/27.1bdd200b.chunk.css",
@@ -33,7 +33,7 @@
     "static/media/zep_min.png": "/toy_board/static/media/zep_min.e25c5240160a116262e9.png",
     "index.html": "/toy_board/index.html",
     "main.ca40c7e2.css.map": "/toy_board/static/css/main.ca40c7e2.css.map",
-    "main.72723419.js.map": "/toy_board/static/js/main.72723419.js.map",
+    "main.030ca001.js.map": "/toy_board/static/js/main.030ca001.js.map",
     "103.d2b4c600.chunk.css.map": "/toy_board/static/css/103.d2b4c600.chunk.css.map",
     "103.260ade96.chunk.js.map": "/toy_board/static/js/103.260ade96.chunk.js.map",
     "27.1bdd200b.chunk.css.map": "/toy_board/static/css/27.1bdd200b.chunk.css.map",
@@ -55,6 +55,6 @@
   },
   "entrypoints": [
     "static/css/main.ca40c7e2.css",
-    "static/js/main.72723419.js"
+    "static/js/main.030ca001.js"
   ]
 }
